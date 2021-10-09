@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/TestSystem/!svn/ver/98/trunk/TestSystem.Command.YB.TianChen
+END
+TianChengYB.cs
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/TestSystem/!svn/ver/2/trunk/TestSystem.Command.YB.TianChen/TianChengYB.cs
+END
+ReadValue_YBTianChen.cs
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/TestSystem/!svn/ver/98/trunk/TestSystem.Command.YB.TianChen/ReadValue_YBTianChen.cs
+END
+TestSystem.Command.YB.TianChen.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/TestSystem/!svn/ver/98/trunk/TestSystem.Command.YB.TianChen/TestSystem.Command.YB.TianChen.csproj
+END
+YBTianChenControl.cs
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/TestSystem/!svn/ver/98/trunk/TestSystem.Command.YB.TianChen/YBTianChenControl.cs
+END
+Command_YBTianChen_WriteData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/TestSystem/!svn/ver/2/trunk/TestSystem.Command.YB.TianChen/Command_YBTianChen_WriteData.cs
+END
+Reader_YBTianChen.cs
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/svn/TestSystem/!svn/ver/2/trunk/TestSystem.Command.YB.TianChen/Reader_YBTianChen.cs
+END

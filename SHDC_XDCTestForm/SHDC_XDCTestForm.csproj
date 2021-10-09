@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D9A77F0-AB81-4D7E-B4E7-A89C1BCA5BD5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SHDC_XDCTestForm</RootNamespace>
+    <AssemblyName>SHDC_XDCTestForm</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="GlassButton, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL\GlassButton.dll</HintPath>
+    </Reference>
+    <Reference Include="SchemeManage.BusinessFacade, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\数据库配置系统\SchemeManage.BusinessFacade\bin\Debug\SchemeManage.BusinessFacade.dll</HintPath>
+    </Reference>
+    <Reference Include="SchemeManage.BusinessFacade.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\数据库配置系统\SchemeManage.BusinessFacade.Interface\bin\Debug\SchemeManage.BusinessFacade.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="SchemeManage.BusinessRule, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\数据库配置系统\SchemeManage.BusinessRule\bin\Debug\SchemeManage.BusinessRule.dll</HintPath>
+    </Reference>
+    <Reference Include="SchemeManage.BusinessRule.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\数据库配置系统\SchemeManage.BusinessRule.Interface\bin\Debug\SchemeManage.BusinessRule.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="SchemeManage.DataAccess">
+      <HintPath>..\Resource\DLL\SchemeManage.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="SchemeManage.DataAccess.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\数据库配置系统\SchemeManage.DataAccess.Interface\bin\Debug\SchemeManage.DataAccess.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL\System.Windows.Forms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TestSystem.BusinessRule, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL\TestSystem.BusinessRule.dll</HintPath>
+    </Reference>
+    <Reference Include="TestSystem.BusinessRule.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL\TestSystem.BusinessRule.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="TestSystem.Common, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL\TestSystem.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="TestSystem.DataAccess, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL\TestSystem.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="TestSystem.DataAccess.Interface, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL\TestSystem.DataAccess.Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="TestSystem.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Resource\DLL\TestSystem.Model.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="NewTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NewTest.Designer.cs">
+      <DependentUpon>NewTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="UC_MainTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_MainTest.Designer.cs">
+      <DependentUpon>UC_MainTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SystemSet.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UC_SystemSet.Designer.cs">
+      <DependentUpon>UC_SystemSet.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XDCManager.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="NewTest.resx">
+      <DependentUpon>NewTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_MainTest.resx">
+      <DependentUpon>UC_MainTest.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SystemSet.resx">
+      <DependentUpon>UC_SystemSet.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\frequentlyCtrlClass\frequentlyCtrlClass.csproj">
+      <Project>{32ba0036-3714-47b8-8814-901f08ed8a04}</Project>
+      <Name>frequentlyCtrlClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ManagementSpecificTools\ManagementSpecificTools.csproj">
+      <Project>{ca21e8ad-5025-49a4-8345-953ce953adea}</Project>
+      <Name>ManagementSpecificTools</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PubClass\PubClass.csproj">
+      <Project>{6ABE4476-A90F-4EB7-BF0D-CE865FFA95DA}</Project>
+      <Name>PubClass</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resource\欧姆龙通讯\TestSystem.Command.ControlCenter\TestSystem.Command.ControlCenter.csproj">
+      <Project>{5E7AE3C5-6DA5-43F0-84C8-F8349418ABF3}</Project>
+      <Name>TestSystem.Command.ControlCenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resource\欧姆龙通讯\TestSystem.Command.Interface\TestSystem.Command.Interface.csproj">
+      <Project>{CCBC540A-0562-4C1D-9ED8-BCB76ACA9431}</Project>
+      <Name>TestSystem.Command.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Resource\欧姆龙通讯\TestSystem.Command.PLC.Omron.PLC.HostLink.Fins\TestSystem.Command.PLC.Omron.HostLink.Fins.csproj">
+      <Project>{AA1F5F4D-6664-497C-A281-A1FEF59F1759}</Project>
+      <Name>TestSystem.Command.PLC.Omron.HostLink.Fins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Soar.Logger\Soar.Logger.csproj">
+      <Project>{a6f0114c-b298-439d-a339-b3e2a70da6ea}</Project>
+      <Name>Soar.Logger</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

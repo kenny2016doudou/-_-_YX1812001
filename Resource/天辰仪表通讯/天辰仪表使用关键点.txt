@@ -1,0 +1,25 @@
+//线程对象
+IComControl comControl;
+
+//传入的地址
+commandData[4] = "#05"; //环境温度
+
+//创建Read对象等
+     OpenTCYBPort();
+            comControl = TestSystem.Command.ControlCenter.ComControl_Factory.getInstance().CreateComControl(ref SP_TCYB);
+
+
+
+  TestSystem.Command.Interface.IRead tcybHJWD = new TestSystem.Command.YB.TianChen.ReadValue_YBTianChen()
+            {
+                AddressStr = commandData[4]
+            };
+            comControl.SetReader("环境温度", tcybHJWD);
+
+            comControl.Start();
+
+
+
+//打开通讯串口信息
+"COM1", StopBits.One, Parity.None, 9600, 8
+      

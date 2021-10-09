@@ -1,0 +1,970 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using TestSystem.BusinessRule.Interface.SchemeModule;
+using System.Collections;
+using System.IO;
+using TestSystem.BusinessRule.SchemeModule;
+
+namespace SHDC_XDCTestForm
+{
+    public partial class UC_MainTest : UserControl
+    {
+        ISchemeRowBO schemeRowBO = new TestSystem.BusinessRule.SchemeModule.SchemeRowBO();
+        XDCManager xdc = null;
+        public UC_MainTest()
+        {
+            InitializeComponent();
+            Load();
+            
+        }
+
+        private void Load()
+        {
+            #region 查表中所有信息，显示某一列数据
+            DataTable ds = schemeRowBO.SelectData("Config");
+            cmb_xdcxh1.Items.Add("请选择");
+            cmb_xdcxh2.Items.Add("请选择");
+            cmb_xdcxh3.Items.Add("请选择");
+            for (int i = 0; i < ds.Rows.Count; i++)
+            {
+                cmb_xdcxh1.Items.Add(ds.Rows[i]["蓄电池型号"].ToString());
+                cmb_xdcxh2.Items.Add(ds.Rows[i]["蓄电池型号"].ToString());
+                cmb_xdcxh3.Items.Add(ds.Rows[i]["蓄电池型号"].ToString());
+            }
+            cmb_xdcxh1.SelectedItem = "请选择";
+            cmb_xdcxh2.SelectedItem = "请选择";
+            cmb_xdcxh3.SelectedItem = "请选择";
+            #endregion
+
+            xdc = new XDCManager(ref SP_Omron);
+            xdc.LoadData();
+
+        }
+
+        #region 警告报警
+        private void Warning(Label lab, bool b)
+        {
+            if (b)
+            {
+                lab.BackColor = Color.Red;
+            }
+            else
+            {
+                lab.BackColor = Color.White;
+            }
+        } 
+        #endregion
+
+        #region 确认、充电、放电、停止操作
+
+        private void btn_1_qrxh_Click(object sender, EventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(txt_1_chexing.Text) && string.IsNullOrEmpty(txt_1_chehao.Text) && string.IsNullOrEmpty(txt_1_chuchangbianhao.Text))
+            {
+                MessageBox.Show("请填写完整的工况后进行试验！");
+                return;
+            }
+            xdc.M_确认操作();
+            btn_1_chongdian.Enabled = true;
+            btn_1_fangdian.Enabled = true;
+
+        }
+
+        private void btn_1_chongdian_Click(object sender, EventArgs e)
+        {
+            xdc.Set1充电操作();
+            timer_chart1.Enabled = true;
+        }
+
+        private void btn_1_tingzhi_Click(object sender, EventArgs e)
+        {
+            xdc.Set1停止操作();
+            timer_chart1.Enabled = false;
+        }
+
+        private void btn_1_fangdian_Click(object sender, EventArgs e)
+        {
+            xdc.Set1放电操作();
+            timer_chart1.Enabled = true;
+        }
+
+
+        private void btn_2_qrxh_Click(object sender, EventArgs e)
+        {
+            if (string.IsNullOrEmpty(txt_2_chexing.Text) && string.IsNullOrEmpty(txt_2_chehao.Text) && string.IsNullOrEmpty(txt_2_chuchangbianhao.Text))
+            {
+                MessageBox.Show("请填写完整的工况后进行试验！");
+                return;
+            }
+            xdc.M_确认操作();
+            btn_2_chongdian.Enabled = true;
+            btn_2_fangdian.Enabled = true;
+        }
+
+
+        private void btn_2_chongdian_Click(object sender, EventArgs e)
+        {
+            xdc.Set2充电操作();
+            timer_chart2.Enabled = true;
+        }
+
+        private void btn_2_fangdian_Click(object sender, EventArgs e)
+        {
+            xdc.Set2放电操作();
+            timer_chart2.Enabled = true;
+        }
+
+        private void btn_2_tingzhi_Click(object sender, EventArgs e)
+        {
+            xdc.Set2停止操作();
+            timer_chart2.Enabled = true;
+        }
+
+
+        private void btn_3_qrxh_Click(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txt_3_chexing.Text) && !string.IsNullOrEmpty(txt_3_chehao.Text) && !string.IsNullOrEmpty(txt_3_chuchangbianhao.Text))
+            {
+                MessageBox.Show("请填写完整的工况后进行试验！");
+                return;
+            }
+            xdc.M_确认操作();
+            btn_3_chongdian.Enabled = true;
+            btn_3_fangdian.Enabled = true;
+
+           
+        }
+        private void btn_3_chongdian_Click(object sender, EventArgs e)
+        {
+            xdc.Set3充电操作();
+            timer_chart3.Enabled = true;
+        }
+        private void btn_3_fangdian_Click(object sender, EventArgs e)
+        {
+            xdc.Set3放电操作();
+            timer_chart3.Enabled = true;
+        }
+
+        private void btn_3_tingzhi_Click(object sender, EventArgs e)
+        {
+            xdc.Set3停止操作();
+            timer_chart3.Enabled = true;
+        }
+
+        #endregion
+
+        #region 选择蓄电池类型
+        private void cmb_xdcxh1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_xdcxh1.SelectedItem.ToString() != "请选择")
+            {
+                DataTable dt = schemeRowBO.SelectData("Config", "蓄电池型号", cmb_xdcxh1.SelectedItem.ToString(), "", "");
+                //设置参数
+                xdc.P1_充电电流设置值 = dt.Rows[0]["充电电流设置"].ToString();
+                xdc.P1_充电时间设置值 = dt.Rows[0]["充电时间设置"].ToString();
+                xdc.P1_充电终止电压设置值 = dt.Rows[0]["充电终止电压设置"].ToString();
+                xdc.P1_放电电流设置值 = dt.Rows[0]["放电电流设置"].ToString();
+                xdc.P1_放电时间设置值 = dt.Rows[0]["放电时间设置"].ToString();
+                xdc.P1_放电终止电压设置值 = dt.Rows[0]["放电终止电压设置"].ToString();
+                xdc.P1_起始电压设置值 = dt.Rows[0]["起始电压设置"].ToString();
+                xdc.P1_循环次数设置值 = dt.Rows[0]["循环次数设置"].ToString();
+
+
+                double Zong_ShiJian = (float.Parse(dt.Rows[0]["充电时间设置"].ToString()) + float.Parse(dt.Rows[0]["放电时间设置"].ToString())) * float.Parse(dt.Rows[0]["循环次数设置"].ToString());
+                Zong_ShiJian = (int.Parse(Zong_ShiJian.ToString().Substring(0, 1)) + 1) * Math.Pow(10, Zong_ShiJian.ToString("0.00").IndexOf('.') - 1);
+                chart1.ChartAreas["ChartArea1"].AxisX.Maximum = Zong_ShiJian;
+                chart1.ChartAreas["ChartArea1"].AxisX.Interval = Zong_ShiJian / 10;
+                chart1.ChartAreas["ChartArea2"].AxisX.Maximum = Zong_ShiJian;
+                chart1.ChartAreas["ChartArea2"].AxisX.Interval = Zong_ShiJian / 10;
+                chart1.ChartAreas["ChartArea3"].AxisX.Maximum = Zong_ShiJian;
+                chart1.ChartAreas["ChartArea3"].AxisX.Interval = Zong_ShiJian / 10;
+
+
+
+
+
+                List<double> lst_dianyas = new List<double>();
+                lst_dianyas.Add(float.Parse(dt.Rows[0]["充电终止电压设置"].ToString()));
+                lst_dianyas.Add(float.Parse(dt.Rows[0]["放电终止电压设置"].ToString()));
+                lst_dianyas.Add(float.Parse(dt.Rows[0]["起始电压设置"].ToString()));
+                var maxvalue = (from t in lst_dianyas select t).Max();
+                maxvalue = (int.Parse(maxvalue.ToString().Substring(0, 1)) + 1) * Math.Pow(10, maxvalue.ToString("0.00").IndexOf('.') - 1);
+                chart1.ChartAreas["ChartArea1"].AxisY.Maximum = maxvalue;
+                chart1.ChartAreas["ChartArea1"].AxisY.Interval = maxvalue / 5;
+
+
+
+
+
+
+                chart1.Series["电压曲线"].Points.AddXY(0, 0);
+                chart1.Series["充电电流曲线"].Points.AddXY(0, 0);
+                chart1.Series["放电电流曲线"].Points.AddXY(0, 0);
+                chart1.Series["安时数曲线"].Points.AddXY(0, 0);
+                this.btn_1_qrxh.Enabled = true;//让确认型号按钮可用
+            }
+        }
+
+        private void cmb_xdcxh2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_xdcxh2.SelectedItem.ToString() != "请选择")
+            {
+                DataTable dt = schemeRowBO.SelectData("Config", "蓄电池型号", cmb_xdcxh2.SelectedItem.ToString(), "", "");
+                //设置参数
+                xdc.P2_充电电流设置值 = dt.Rows[0]["充电电流设置"].ToString();
+                xdc.P2_充电时间设置值 = dt.Rows[0]["充电时间设置"].ToString();
+                xdc.P2_充电终止电压设置值 = dt.Rows[0]["充电终止电压设置"].ToString();
+                xdc.P2_放电电流设置值 = dt.Rows[0]["放电电流设置"].ToString();
+                xdc.P2_放电时间设置值 = dt.Rows[0]["放电时间设置"].ToString();
+                xdc.P2_放电终止电压设置值 = dt.Rows[0]["放电终止电压设置"].ToString();
+                xdc.P2_起始电压设置值 = dt.Rows[0]["起始电压设置"].ToString();
+                xdc.P2_循环次数设置值 = dt.Rows[0]["循环次数设置"].ToString();
+
+
+                double Zong_ShiJian = (float.Parse(dt.Rows[0]["充电时间设置"].ToString()) + float.Parse(dt.Rows[0]["放电时间设置"].ToString())) * float.Parse(dt.Rows[0]["循环次数设置"].ToString());
+                Zong_ShiJian = (int.Parse(Zong_ShiJian.ToString().Substring(0, 1)) + 1) * Math.Pow(10, Zong_ShiJian.ToString("0.00").IndexOf('.') - 1);
+                chart2.ChartAreas["ChartArea1"].AxisX.Maximum = Zong_ShiJian;
+                chart2.ChartAreas["ChartArea1"].AxisX.Interval = Zong_ShiJian / 10;
+                chart2.ChartAreas["ChartArea2"].AxisX.Maximum = Zong_ShiJian;
+                chart2.ChartAreas["ChartArea2"].AxisX.Interval = Zong_ShiJian / 10;
+                chart2.ChartAreas["ChartArea3"].AxisX.Maximum = Zong_ShiJian;
+                chart2.ChartAreas["ChartArea3"].AxisX.Interval = Zong_ShiJian / 10;
+
+
+                List<double> lst_dianyas = new List<double>();
+                lst_dianyas.Add(float.Parse(dt.Rows[0]["充电终止电压设置"].ToString()));
+                lst_dianyas.Add(float.Parse(dt.Rows[0]["放电终止电压设置"].ToString()));
+                lst_dianyas.Add(float.Parse(dt.Rows[0]["起始电压设置"].ToString()));
+                var maxvalue = (from t in lst_dianyas select t).Max();
+                maxvalue = (int.Parse(maxvalue.ToString().Substring(0, 1)) + 1) * Math.Pow(10, maxvalue.ToString("0.00").IndexOf('.') - 1);
+                chart2.ChartAreas["ChartArea1"].AxisY.Maximum = maxvalue;
+                chart2.ChartAreas["ChartArea1"].AxisY.Interval = maxvalue / 5;
+
+
+                chart2.Series["电压曲线"].Points.AddXY(0, 0);
+                chart2.Series["充电电流曲线"].Points.AddXY(0, 0);
+                chart2.Series["放电电流曲线"].Points.AddXY(0, 0);
+                chart2.Series["安时数曲线"].Points.AddXY(0, 0);
+                this.btn_2_qrxh.Enabled = true;//让确认型号按钮可用
+            }
+        }
+
+        private void cmb_xdcxh3_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmb_xdcxh3.SelectedItem.ToString() != "请选择")
+            {
+                DataTable dt = schemeRowBO.SelectData("Config", "蓄电池型号", cmb_xdcxh3.SelectedItem.ToString(), "", "");
+                //设置参数
+                xdc.P3_充电电流设置值 = dt.Rows[0]["充电电流设置"].ToString();
+                xdc.P3_充电时间设置值 = dt.Rows[0]["充电时间设置"].ToString();
+                xdc.P3_充电终止电压设置值 = dt.Rows[0]["充电终止电压设置"].ToString();
+                xdc.P3_放电电流设置值 = dt.Rows[0]["放电电流设置"].ToString();
+                xdc.P3_放电时间设置值 = dt.Rows[0]["放电时间设置"].ToString();
+                xdc.P3_放电终止电压设置值 = dt.Rows[0]["放电终止电压设置"].ToString();
+                xdc.P3_起始电压设置值 = dt.Rows[0]["起始电压设置"].ToString();
+                xdc.P3_循环次数设置值 = dt.Rows[0]["循环次数设置"].ToString();
+
+
+                double Zong_ShiJian = (float.Parse(dt.Rows[0]["充电时间设置"].ToString()) + float.Parse(dt.Rows[0]["放电时间设置"].ToString())) * float.Parse(dt.Rows[0]["循环次数设置"].ToString());
+                Zong_ShiJian = (int.Parse(Zong_ShiJian.ToString().Substring(0, 1)) + 1) * Math.Pow(10, Zong_ShiJian.ToString("0.00").IndexOf('.') - 1);
+                chart3.ChartAreas["ChartArea1"].AxisX.Maximum = Zong_ShiJian;
+                chart3.ChartAreas["ChartArea1"].AxisX.Interval = Zong_ShiJian / 10;
+                chart3.ChartAreas["ChartArea3"].AxisX.Maximum = Zong_ShiJian;
+                chart3.ChartAreas["ChartArea3"].AxisX.Interval = Zong_ShiJian / 10;
+                chart3.ChartAreas["ChartArea3"].AxisX.Maximum = Zong_ShiJian;
+                chart3.ChartAreas["ChartArea3"].AxisX.Interval = Zong_ShiJian / 10;
+
+
+
+
+
+                List<double> lst_dianyas = new List<double>();
+                lst_dianyas.Add(float.Parse(dt.Rows[0]["充电终止电压设置"].ToString()));
+                lst_dianyas.Add(float.Parse(dt.Rows[0]["放电终止电压设置"].ToString()));
+                lst_dianyas.Add(float.Parse(dt.Rows[0]["起始电压设置"].ToString()));
+                var maxvalue = (from t in lst_dianyas select t).Max();
+                maxvalue = (int.Parse(maxvalue.ToString().Substring(0, 1)) + 1) * Math.Pow(10, maxvalue.ToString("0.00").IndexOf('.') - 1);
+                chart3.ChartAreas["ChartArea1"].AxisY.Maximum = maxvalue;
+                chart3.ChartAreas["ChartArea1"].AxisY.Interval = maxvalue / 5;
+
+
+
+                chart3.Series["电压曲线"].Points.AddXY(0, 0);
+                chart3.Series["充电电流曲线"].Points.AddXY(0, 0);
+                chart3.Series["放电电流曲线"].Points.AddXY(0, 0);
+                chart3.Series["安时数曲线"].Points.AddXY(0, 0);
+                this.btn_3_qrxh.Enabled = true;//让确认型号按钮可用
+            }
+        }
+
+
+
+
+        #endregion
+
+        #region 显示警告以及运行状态
+
+        /// <summary>
+        /// 1通道数据读取
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer_1_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                Warning(lab_1_dycdzzdy, xdc.P1_是否大于充电终止电压);
+                Warning(lab_1_gl, xdc.P1_是否过流);
+                Warning(lab_1_gy, xdc.P1_是否过压);
+                Warning(lab_1_wdgg, xdc.P1_是否温度过高);
+                Warning(lab_1_scdlgd, xdc.P1_是否输出电流过大);
+                Warning(lab_1_xycdqsdy, xdc.P1_是否小于充电起始电压);
+                Warning(lab_1_xyfdzzdy, xdc.P1_是否小于放电终止电压);
+                Display_1_Yxzt();
+            }
+            catch
+            {
+            }
+
+        }
+
+
+        /// <summary>
+        /// 2通道数据读取
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer_2_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                Warning(lab_2_dycdzzdy, xdc.P2_是否大于充电终止电压);
+                Warning(lab_2_gl, xdc.P2_是否过流);
+                Warning(lab_2_gy, xdc.P2_是否过压);
+                Warning(lab_2_wdgg, xdc.P2_是否温度过高);
+                Warning(lab_2_scdlgd, xdc.P2_是否输出电流过大);
+                Warning(lab_2_xycdqsdy, xdc.P2_是否小于充电起始电压);
+                Warning(lab_2_xyfdzzdy, xdc.P2_是否小于放电终止电压);
+                Display_2_Yxzt();
+            }
+            catch
+            {
+            }
+        }
+
+        /// <summary>
+        /// 3通道数据读取
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void timer_3_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                Warning(lab_3_dycdzzdy, xdc.P3_是否大于充电终止电压);
+                Warning(lab_3_gl, xdc.P3_是否过流);
+                Warning(lab_3_gy, xdc.P3_是否过压);
+                Warning(lab_3_wdgg, xdc.P3_是否温度过高);
+                Warning(lab_3_scdlgd, xdc.P3_是否输出电流过大);
+                Warning(lab_3_xycdqsdy, xdc.P3_是否小于充电起始电压);
+                Warning(lab_3_xyfdzzdy, xdc.P3_是否小于放电终止电压);
+                Display_3_Yxzt();
+            }
+            catch
+            {
+            }
+        }
+        #endregion
+
+        #region 显示运行状态
+
+        /// <summary>
+        /// 显示运行状态
+        /// </summary>
+        public void Display_1_Yxzt()
+        {
+            switch (xdc.P1_显示运行状态)
+            {
+                case "0":
+                    lab_1_yxzt.Text = "运行状态：" + "待机";
+                    cmb_xdcxh1.Enabled = true;
+                    if (cmb_xdcxh1.Text != "请选择")
+                    {
+                        btn_1_qrxh.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_1_qrxh.Enabled = false;
+                    }
+
+
+                    break;
+                case "1":
+                    lab_1_yxzt.Text = "运行状态：" + "正在充电";
+                    cmb_xdcxh1.Enabled = false;
+                    btn_1_qrxh.Enabled = false;
+                    btn_1_tingzhi.Enabled = true;
+                    break;
+                case "2":
+                    lab_1_yxzt.Text = "运行状态：" + "正在放电";
+                    cmb_xdcxh1.Enabled = false;
+                    btn_1_qrxh.Enabled = false;
+                    btn_1_tingzhi.Enabled = true;
+                    break;
+                case "3":
+                    lab_1_yxzt.Text = "运行状态：" + "故障";
+                    cmb_xdcxh1.Enabled = false;
+                    btn_1_qrxh.Enabled = false;
+                    btn_1_tingzhi.Enabled = true;
+                    break;
+                case "4":
+                    lab_1_yxzt.Text = "运行状态：" + "充电完成";
+                    cmb_xdcxh1.Enabled = false;
+                    btn_1_qrxh.Enabled = false;
+                    btn_1_tingzhi.Enabled = true;
+                    break;
+                case "5":
+                    lab_1_yxzt.Text = "运行状态：" + "放电完成";
+                    cmb_xdcxh1.Enabled = false;
+                    btn_1_qrxh.Enabled = false;
+                    btn_1_tingzhi.Enabled = true;
+                    break;
+                case "7":
+                    lab_1_yxzt.Text = "运行状态：" + "停止";
+                    cmb_xdcxh1.Enabled = true;
+                    if (cmb_xdcxh1.Text != "请选择")
+                    {
+                        btn_1_qrxh.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_1_qrxh.Enabled = false;
+                    }
+                    btn_1_tingzhi.Enabled = true;
+                    timer_chart1.Enabled = false;
+                    break;
+                case "8":
+                    lab_1_yxzt.Text = "运行状态：" + "程序自动完成";
+                    cmb_xdcxh1.Enabled = true;
+                    if (cmb_xdcxh1.Text != "请选择")
+                    {
+                        btn_1_qrxh.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_1_qrxh.Enabled = false;
+                    }
+                    btn_1_tingzhi.Enabled = false;
+                    btn_1_chongdian.Enabled = false;
+                    btn_1_fangdian.Enabled = false;
+                    timer_chart1.Enabled = false;
+                    break;
+            }
+        }
+
+
+        private void Display_2_Yxzt()
+        {
+            switch (xdc.P2_显示运行状态)
+            {
+                case "0":
+                    lab_2_yxzt.Text = "运行状态：" + "待机";
+                    cmb_xdcxh2.Enabled = true;
+                    if (cmb_xdcxh2.Text != "请选择")
+                    {
+                        btn_2_qrxh.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_2_qrxh.Enabled = false;
+                    }
+
+
+                    break;
+                case "1":
+                    lab_2_yxzt.Text = "运行状态：" + "正在充电";
+                    cmb_xdcxh2.Enabled = false;
+                    btn_2_qrxh.Enabled = false;
+                    btn_2_tingzhi.Enabled = true;
+                    break;
+                case "2":
+                    lab_2_yxzt.Text = "运行状态：" + "正在放电";
+                    cmb_xdcxh2.Enabled = false;
+                    btn_2_qrxh.Enabled = false;
+                    btn_2_tingzhi.Enabled = true;
+                    break;
+                case "3":
+                    lab_2_yxzt.Text = "运行状态：" + "故障";
+                    cmb_xdcxh2.Enabled = false;
+                    btn_2_qrxh.Enabled = false;
+                    btn_2_tingzhi.Enabled = true;
+                    break;
+                case "4":
+                    lab_2_yxzt.Text = "运行状态：" + "充电完成";
+                    cmb_xdcxh2.Enabled = false;
+                    btn_2_qrxh.Enabled = false;
+                    btn_2_tingzhi.Enabled = true;
+                    break;
+                case "5":
+                    lab_2_yxzt.Text = "运行状态：" + "放电完成";
+                    cmb_xdcxh2.Enabled = false;
+                    btn_2_qrxh.Enabled = false;
+                    btn_2_tingzhi.Enabled = true;
+                    break;
+                case "7":
+                    lab_2_yxzt.Text = "运行状态：" + "停止";
+                    cmb_xdcxh2.Enabled = true;
+                    if (cmb_xdcxh2.Text != "请选择")
+                    {
+                        btn_2_qrxh.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_2_qrxh.Enabled = false;
+                    }
+                    btn_2_tingzhi.Enabled = true;
+                    timer_chart2.Enabled = false;
+                    break;
+                case "8":
+                    lab_2_yxzt.Text = "运行状态：" + "程序自动完成";
+                    cmb_xdcxh2.Enabled = true;
+                    if (cmb_xdcxh2.Text != "请选择")
+                    {
+                        btn_2_qrxh.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_2_qrxh.Enabled = false;
+                    }
+                    btn_2_tingzhi.Enabled = false;
+                    btn_2_chongdian.Enabled = false;
+                    btn_2_fangdian.Enabled = false;
+                    timer_chart2.Enabled = false;
+                    break;
+            }
+        }
+
+
+        private void Display_3_Yxzt()
+        {
+            switch (xdc.P3_显示运行状态)
+            {
+                case "0":
+                    lab_3_yxzt.Text = "运行状态：" + "待机";
+                    cmb_xdcxh3.Enabled = true;
+                    if (cmb_xdcxh3.Text != "请选择")
+                    {
+                        btn_3_qrxh.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_3_qrxh.Enabled = false;
+                    }
+                    break;
+                case "1":
+                    lab_3_yxzt.Text = "运行状态：" + "正在充电";
+                    cmb_xdcxh3.Enabled = false;
+                    btn_3_qrxh.Enabled = false;
+                    btn_3_tingzhi.Enabled = true;
+                    break;
+                case "2":
+                    lab_3_yxzt.Text = "运行状态：" + "正在放电";
+                    cmb_xdcxh3.Enabled = false;
+                    btn_3_qrxh.Enabled = false;
+                    btn_3_tingzhi.Enabled = true;
+                    break;
+                case "3":
+                    lab_3_yxzt.Text = "运行状态：" + "故障";
+                    cmb_xdcxh3.Enabled = false;
+                    btn_3_qrxh.Enabled = false;
+                    btn_3_tingzhi.Enabled = true;
+                    break;
+                case "4":
+                    lab_3_yxzt.Text = "运行状态：" + "充电完成";
+                    cmb_xdcxh3.Enabled = false;
+                    btn_3_qrxh.Enabled = false;
+                    btn_3_tingzhi.Enabled = true;
+                    break;
+                case "5":
+                    lab_3_yxzt.Text = "运行状态：" + "放电完成";
+                    cmb_xdcxh3.Enabled = false;
+                    btn_3_qrxh.Enabled = false;
+                    btn_3_tingzhi.Enabled = true;
+                    break;
+                case "7":
+                    lab_3_yxzt.Text = "运行状态：" + "停止";
+                    cmb_xdcxh3.Enabled = true;
+                    if (cmb_xdcxh3.Text != "请选择")
+                    {
+                        btn_3_qrxh.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_3_qrxh.Enabled = false;
+                    }
+                    btn_3_tingzhi.Enabled = true;
+                    timer_chart3.Enabled = false;
+                    break;
+                case "8":
+                    lab_3_yxzt.Text = "运行状态：" + "程序自动完成";
+                    cmb_xdcxh3.Enabled = true;
+                    if (cmb_xdcxh3.Text != "请选择")
+                    {
+                        btn_3_qrxh.Enabled = true;
+                    }
+                    else
+                    {
+                        btn_3_qrxh.Enabled = false;
+                    }
+                    btn_3_tingzhi.Enabled = false;
+                    btn_3_chongdian.Enabled = false;
+                    btn_3_fangdian.Enabled = false;
+                    timer_chart3.Enabled = false;
+                    break;
+            }
+        }
+
+        #endregion
+
+        #region 画图
+
+        int time1 = 0;//1通道时间计数
+        double userTimer1 = 0;//1通道画图时间
+        private void timer_chart1_Tick(object sender, EventArgs e)
+        {
+
+            try
+            {
+                txt_1_dcdy.Text = xdc.P1_显示电池电压;
+                txt_1_cddl.Text = xdc.P1_显示充电电流;
+                txt_1_cdsj.Text = xdc.P1_显示充电时间;
+                txt_1_fdass.Text = xdc.P1_显示放电安时数;
+                txt_1_fddl.Text = xdc.P1_显示放电电流;
+                txt_1_fdsj.Text = xdc.P1_显示放电时间;
+                txt_1_xhcs.Text = xdc.P1_显示循环次数;
+
+                time1 += 1;
+                userTimer1 = time1 / 60000 / this.timer_chart1.Interval;
+
+                chart1.Series["电压曲线"].Points.AddXY(userTimer1, txt_1_dcdy.Text);
+                chart1.Series["充电电流曲线"].Points.AddXY(userTimer1, txt_1_cddl.Text);
+                chart1.Series["放电电流曲线"].Points.AddXY(userTimer1, txt_1_fddl.Text);
+                chart1.Series["安时数曲线"].Points.AddXY(userTimer1, txt_1_fdass.Text);
+            }
+            catch
+            {
+
+            }
+
+        }
+
+        int time2 = 0;//2通道时间计数
+        double userTimer2 = 0;//2通道画图时间
+        private void timer_chart2_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_2_dcdy.Text = xdc.P2_显示电池电压;
+                txt_2_cddl.Text = xdc.P2_显示充电电流;
+                txt_2_cdsj.Text = xdc.P2_显示充电时间;
+                txt_2_fdass.Text = xdc.P2_显示放电安时数;
+                txt_2_fddl.Text = xdc.P2_显示放电电流;
+                txt_2_fdsj.Text = xdc.P2_显示放电时间;
+                txt_2_xhcs.Text = xdc.P2_显示循环次数;
+
+                time2 += 1;
+                userTimer2 = time2 / 60000 / this.timer_chart2.Interval;
+
+                chart2.Series["电压曲线"].Points.AddXY(userTimer2, txt_2_dcdy.Text);
+                chart2.Series["充电电流曲线"].Points.AddXY(userTimer2, txt_2_cddl.Text);
+                chart2.Series["放电电流曲线"].Points.AddXY(userTimer2, txt_2_fddl.Text);
+                chart2.Series["安时数曲线"].Points.AddXY(userTimer2, txt_2_fdass.Text);
+            }
+            catch
+            {
+
+            }
+        }
+
+        int time3 = 0;//2通道时间计数
+        double userTimer3 = 0;//2通道画图时间
+        private void timer_chart3_Tick(object sender, EventArgs e)
+        {
+            try
+            {
+                txt_3_dcdy.Text = xdc.P3_显示电池电压;
+                txt_3_cddl.Text = xdc.P3_显示充电电流;
+                txt_3_cdsj.Text = xdc.P3_显示充电时间;
+                txt_3_fdass.Text = xdc.P3_显示放电安时数;
+                txt_3_fddl.Text = xdc.P3_显示放电电流;
+                txt_3_fdsj.Text = xdc.P3_显示放电时间;
+                txt_3_xhcs.Text = xdc.P3_显示循环次数;
+
+                time3+= 1;
+                userTimer3 = time3 / 60000 / this.timer_chart3.Interval;
+
+                chart3.Series["电压曲线"].Points.AddXY(userTimer3, txt_3_dcdy.Text);
+                chart3.Series["充电电流曲线"].Points.AddXY(userTimer3, txt_3_cddl.Text);
+                chart3.Series["放电电流曲线"].Points.AddXY(userTimer3, txt_3_fddl.Text);
+                chart3.Series["安时数曲线"].Points.AddXY(userTimer3, txt_3_fdass.Text);
+            }
+            catch
+            {
+
+            }
+        }
+
+
+        #endregion
+
+        #region 数据保存
+        private void Save1()
+        {
+
+            FileStream fsObj = null;
+            BinaryReader binRdr = null;
+            try
+            {
+                DataTable dt = schemeRowBO.SelectData("Config", "蓄电池型号", cmb_xdcxh1.SelectedItem.ToString(), "", "");
+                string chartname = DateTime.Now.ToString("yyyyMMddHHmmss")+".jpg";
+                chart1.SaveImage(Application.StartupPath + @"\picture\" + chartname, System.Drawing.Imaging.ImageFormat.Jpeg);
+                fsObj = File.OpenRead(Application.StartupPath + @"\picture\" + chartname);
+                byte[] imgContent = new byte[fsObj.Length];
+                binRdr = new BinaryReader(fsObj);
+                imgContent = binRdr.ReadBytes((int)fsObj.Length);
+                string[] argColName = new string[10];
+                object[] argColContent = new object[10];
+                argColName[0] = "蓄电池型号";
+                argColContent[0] = dt.Rows[0]["蓄电池型号"];
+                argColName[1] = "充电时间";
+                argColContent[1] = dt.Rows[0]["充电时间设置"];
+                argColName[2] = "充电电流";
+                argColContent[2] = dt.Rows[0]["充电电流设置"];
+                argColName[3] = "放电时间"; 
+                argColContent[3] = dt.Rows[0]["放电时间设置"];
+
+                argColName[4] = "放电电流";
+                argColContent[4] = dt.Rows[0]["放电电流设置"];  
+
+                argColName[5] = "循环次数";
+                argColContent[5] = dt.Rows[0]["循环次数设置"]; 
+
+                argColName[6] = "起始电压";
+                argColContent[6] = dt.Rows[0]["起始电压设置"];  
+
+                argColName[7] = "充电终止电压";
+                argColContent[7] = dt.Rows[0]["充电终止电压设置"];
+
+
+
+                argColName[8] = "放电终止电压";
+                argColContent[8] =dt.Rows[0]["放电终止电压设置"];
+
+                argColName[9] = "充放电图形";
+                argColContent[9] = imgContent; //该列必须为图片类型
+
+
+                ISchemeRowBO _SchemeRowBO = new SchemeRowBO();
+                _SchemeRowBO.SaveData("TestData", argColName, argColContent, false);
+                MessageBox.Show("1通道数据保存成功!");
+            }
+            catch
+            {
+                MessageBox.Show("1通道数据保存失败!");
+            }
+        }
+
+        private void Save2()
+        {
+            FileStream fsObj = null;
+            BinaryReader binRdr = null;
+            try
+            {
+                DataTable dt = schemeRowBO.SelectData("Config", "蓄电池型号", cmb_xdcxh2.SelectedItem.ToString(), "", "");
+                string chartname = DateTime.Now.ToString("yyyyMMddHHmmss") + ".jpg";
+                chart2.SaveImage(Application.StartupPath + @"\picture\" + chartname, System.Drawing.Imaging.ImageFormat.Jpeg);
+                fsObj = File.OpenRead(Application.StartupPath + @"\picture\" + chartname);
+                byte[] imgContent = new byte[fsObj.Length];
+                binRdr = new BinaryReader(fsObj);
+                imgContent = binRdr.ReadBytes((int)fsObj.Length);
+                string[] argColName = new string[10];
+                object[] argColContent = new object[10];
+                argColName[0] = "蓄电池型号";
+                argColContent[0] = dt.Rows[0]["蓄电池型号"];
+                argColName[1] = "充电时间";
+                argColContent[1] = dt.Rows[0]["充电时间设置"];
+                argColName[2] = "充电电流";
+                argColContent[2] = dt.Rows[0]["充电电流设置"];
+                argColName[3] = "放电时间";
+                argColContent[3] = dt.Rows[0]["放电时间设置"];
+
+                argColName[4] = "放电电流";
+                argColContent[4] = dt.Rows[0]["放电电流设置"];
+
+                argColName[5] = "循环次数";
+                argColContent[5] = dt.Rows[0]["循环次数设置"];
+
+                argColName[6] = "起始电压";
+                argColContent[6] = dt.Rows[0]["起始电压设置"];
+
+                argColName[7] = "充电终止电压";
+                argColContent[7] = dt.Rows[0]["充电终止电压设置"];
+
+
+
+                argColName[8] = "放电终止电压";
+                argColContent[8] = dt.Rows[0]["放电终止电压设置"];
+
+                argColName[9] = "充放电图形";
+                argColContent[9] = imgContent; //该列必须为图片类型
+
+
+                ISchemeRowBO _SchemeRowBO = new SchemeRowBO();
+                _SchemeRowBO.SaveData("TestData", argColName, argColContent, false);
+                MessageBox.Show("2通道数据保存成功!");
+            }
+            catch
+            {
+                MessageBox.Show("2通道数据保存失败!");
+            }
+        }
+
+        private void Save3()
+        {
+            FileStream fsObj = null;
+            BinaryReader binRdr = null;
+            try
+            {
+                DataTable dt = schemeRowBO.SelectData("Config", "蓄电池型号", cmb_xdcxh3.SelectedItem.ToString(), "", "");
+                string chartname = DateTime.Now.ToString("yyyyMMddHHmmss") + ".jpg";
+                chart3.SaveImage(Application.StartupPath + @"\picture\" + chartname, System.Drawing.Imaging.ImageFormat.Jpeg);
+                fsObj = File.OpenRead(Application.StartupPath + @"\picture\" + chartname);
+                byte[] imgContent = new byte[fsObj.Length];
+                binRdr = new BinaryReader(fsObj);
+                imgContent = binRdr.ReadBytes((int)fsObj.Length);
+                string[] argColName = new string[10];
+                object[] argColContent = new object[10];
+                argColName[0] = "蓄电池型号";
+                argColContent[0] = dt.Rows[0]["蓄电池型号"];
+                argColName[1] = "充电时间";
+                argColContent[1] = dt.Rows[0]["充电时间设置"];
+                argColName[2] = "充电电流";
+                argColContent[2] = dt.Rows[0]["充电电流设置"];
+                argColName[3] = "放电时间";
+                argColContent[3] = dt.Rows[0]["放电时间设置"];
+
+                argColName[4] = "放电电流";
+                argColContent[4] = dt.Rows[0]["放电电流设置"];
+
+                argColName[5] = "循环次数";
+                argColContent[5] = dt.Rows[0]["循环次数设置"];
+
+                argColName[6] = "起始电压";
+                argColContent[6] = dt.Rows[0]["起始电压设置"];
+
+                argColName[7] = "充电终止电压";
+                argColContent[7] = dt.Rows[0]["充电终止电压设置"];
+
+
+
+                argColName[8] = "放电终止电压";
+                argColContent[8] = dt.Rows[0]["放电终止电压设置"];
+
+                argColName[9] = "充放电图形";
+                argColContent[9] = imgContent; //该列必须为图片类型
+
+
+                ISchemeRowBO _SchemeRowBO = new SchemeRowBO();
+                _SchemeRowBO.SaveData("TestData", argColName, argColContent, false);
+                MessageBox.Show("3通道数据保存成功!");
+            }
+            catch
+            {
+                MessageBox.Show("3通道数据保存失败!");
+            }
+        }
+
+        private void btn_1_save_Click(object sender, EventArgs e)
+        {
+            Save1();
+        }
+        private void btn_2_save_Click(object sender, EventArgs e)
+        {
+            Save2();
+        }
+
+        private void btn_3_save_Click(object sender, EventArgs e)
+        {
+            Save3();
+        }
+
+        #endregion
+
+        #region 退出程序
+
+        private void btn_quit_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //0，3，7，8
+                if (
+                    (xdc.P1_显示运行状态 == "0"
+                    || xdc.P1_显示运行状态 == "3"
+                    || xdc.P1_显示运行状态 == "7"
+                    || xdc.P1_显示运行状态 == "8"
+                    )
+                    &&
+                    (xdc.P2_显示运行状态 == "0"
+                    || xdc.P2_显示运行状态 == "3"
+                    || xdc.P2_显示运行状态 == "7"
+                    || xdc.P2_显示运行状态 == "8"
+                    )
+                    &&
+                    (xdc.P3_显示运行状态 == "0"
+                    || xdc.P3_显示运行状态 == "3"
+                    || xdc.P3_显示运行状态 == "7"
+                    || xdc.P3_显示运行状态 == "8"
+                    )
+
+                    )
+                {
+                    this.FindForm().Close();
+                }
+                else
+                {
+                    MessageBox.Show("正在运行中!无法关闭程序!");
+                }
+
+            }
+            catch
+            {
+                this.FindForm().Close();
+            }
+
+        } 
+        #endregion
+
+        
+
+       
+
+       
+
+      
+
+       
+
+       
+
+
+        
+    }
+}

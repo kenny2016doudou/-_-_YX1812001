@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/svn/TestSystem/!svn/ver/80/trunk/TestSystem.Command.Interface
+END
+ICommand_WriteData.cs
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/TestSystem/!svn/ver/2/trunk/TestSystem.Command.Interface/ICommand_WriteData.cs
+END
+TestSystem.Command.Interface.csproj
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/TestSystem/!svn/ver/2/trunk/TestSystem.Command.Interface/TestSystem.Command.Interface.csproj
+END
+IRead.cs
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/TestSystem/!svn/ver/80/trunk/TestSystem.Command.Interface/IRead.cs
+END
+ICommand.cs
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/TestSystem/!svn/ver/80/trunk/TestSystem.Command.Interface/ICommand.cs
+END

@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0D9A77F0-AB81-4D7E-B4E7-A89C1BCA5BD5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SHDC_XDCTestForm</RootNamespace>
+    <AssemblyName>SHDC_XDCTestForm</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="UC_lable.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_lable.Designer.cs">
+      <DependentUpon>UC_lable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_MainTest.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UC_MainTest.Designer.cs">
+      <DependentUpon>UC_MainTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UC_SystemSet.cs">
+      <SubType>UserControl</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="UC_SystemSet.Designer.cs">
+      <DependentUpon>UC_SystemSet.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="XDCManager.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="UC_lable.resx">
+      <DependentUpon>UC_lable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_MainTest.resx">
+      <DependentUpon>UC_MainTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UC_SystemSet.resx">
+      <DependentUpon>UC_SystemSet.cs</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\TestSystem.BusinessRule.Interface\TestSystem.BusinessRule.Interface.csproj">
+      <Project>{61812CB5-E22C-483C-8B51-4BD9B8BBFDDD}</Project>
+      <Name>TestSystem.BusinessRule.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSystem.BusinessRule\TestSystem.BusinessRule.csproj">
+      <Project>{A400518F-0578-493E-A1B3-1AD060EA870C}</Project>
+      <Name>TestSystem.BusinessRule</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSystem.Command.ControlCenter\TestSystem.Command.ControlCenter.csproj">
+      <Project>{5E7AE3C5-6DA5-43F0-84C8-F8349418ABF3}</Project>
+      <Name>TestSystem.Command.ControlCenter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSystem.Command.Interface\TestSystem.Command.Interface.csproj">
+      <Project>{CCBC540A-0562-4C1D-9ED8-BCB76ACA9431}</Project>
+      <Name>TestSystem.Command.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSystem.Command.PLC.Omron.PLC.HostLink.Fins\TestSystem.Command.PLC.Omron.HostLink.Fins.csproj">
+      <Project>{AA1F5F4D-6664-497C-A281-A1FEF59F1759}</Project>
+      <Name>TestSystem.Command.PLC.Omron.HostLink.Fins</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSystem.Common\TestSystem.Common.csproj">
+      <Project>{35BDF593-AAC6-4E59-B3F9-D1CA49ECEF24}</Project>
+      <Name>TestSystem.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSystem.DataAccess.Interface\TestSystem.DataAccess.Interface.csproj">
+      <Project>{5C6BA276-D8BE-4283-BFCE-ECC29D520995}</Project>
+      <Name>TestSystem.DataAccess.Interface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSystem.DataAccess\TestSystem.DataAccess.csproj">
+      <Project>{08BB0129-D817-4BC0-8F21-5153AD05358C}</Project>
+      <Name>TestSystem.DataAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TestSystem.Model\TestSystem.Model.csproj">
+      <Project>{A8F72121-D46C-4F09-B188-AFED25D0F6E2}</Project>
+      <Name>TestSystem.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

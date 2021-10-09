@@ -1,0 +1,2726 @@
+﻿namespace SHDC_XDCTestForm
+{
+    partial class UC_MainTest
+    {
+        /// <summary> 
+        /// 必需的设计器变量。
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary> 
+        /// 清理所有正在使用的资源。
+        /// </summary>
+        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region 组件设计器生成的代码
+
+        /// <summary> 
+        /// 设计器支持所需的方法 - 不要
+        /// 使用代码编辑器修改此方法的内容。
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UC_MainTest));
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea14 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea15 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series17 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series18 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series19 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series20 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea10 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea11 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea12 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series14 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series15 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series16 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea16 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea17 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea18 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series21 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series22 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series23 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series24 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            this.labTitle = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lab_3_wdgg = new System.Windows.Forms.Label();
+            this.lab_3_gl = new System.Windows.Forms.Label();
+            this.lab_3_gy = new System.Windows.Forms.Label();
+            this.lab_3_scdlgd = new System.Windows.Forms.Label();
+            this.lab_3_dcjxjf = new System.Windows.Forms.Label();
+            this.lab_3_xyfdzzdy = new System.Windows.Forms.Label();
+            this.lab_3_dycdzzdy = new System.Windows.Forms.Label();
+            this.lab_3_xycdqsdy = new System.Windows.Forms.Label();
+            this.label86 = new System.Windows.Forms.Label();
+            this.label87 = new System.Windows.Forms.Label();
+            this.label88 = new System.Windows.Forms.Label();
+            this.label89 = new System.Windows.Forms.Label();
+            this.label90 = new System.Windows.Forms.Label();
+            this.label91 = new System.Windows.Forms.Label();
+            this.label92 = new System.Windows.Forms.Label();
+            this.label93 = new System.Windows.Forms.Label();
+            this.txt_3_fdass = new System.Windows.Forms.TextBox();
+            this.label94 = new System.Windows.Forms.Label();
+            this.label95 = new System.Windows.Forms.Label();
+            this.lab_3_yxzt = new System.Windows.Forms.Label();
+            this.txt_3_xhcs = new System.Windows.Forms.TextBox();
+            this.txt_3_fdsj = new System.Windows.Forms.TextBox();
+            this.txt_3_fddl = new System.Windows.Forms.TextBox();
+            this.txt_3_cdsj = new System.Windows.Forms.TextBox();
+            this.txt_3_cddl = new System.Windows.Forms.TextBox();
+            this.txt_3_dcdy = new System.Windows.Forms.TextBox();
+            this.label32 = new System.Windows.Forms.Label();
+            this.label33 = new System.Windows.Forms.Label();
+            this.label35 = new System.Windows.Forms.Label();
+            this.label36 = new System.Windows.Forms.Label();
+            this.label37 = new System.Windows.Forms.Label();
+            this.label38 = new System.Windows.Forms.Label();
+            this.label40 = new System.Windows.Forms.Label();
+            this.label41 = new System.Windows.Forms.Label();
+            this.label42 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.cmb_xdcxh3 = new System.Windows.Forms.ComboBox();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.btn_3_qrxh = new System.Windows.Forms.Button();
+            this.btn_3_tingzhi = new System.Windows.Forms.Button();
+            this.btn_3_fangdian = new System.Windows.Forms.Button();
+            this.btn_3_chongdian = new System.Windows.Forms.Button();
+            this.tabControl1 = new System.Windows.Forms.TabControl();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBox12 = new System.Windows.Forms.GroupBox();
+            this.txt_1_shiyankaishishijian = new System.Windows.Forms.TextBox();
+            this.btn_1_save = new System.Windows.Forms.Button();
+            this.label59 = new System.Windows.Forms.Label();
+            this.txt_1_chuchangbianhao = new System.Windows.Forms.TextBox();
+            this.txt_1_chehao = new System.Windows.Forms.TextBox();
+            this.txt_1_chexing = new System.Windows.Forms.TextBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.lab_1_wdgg = new System.Windows.Forms.Label();
+            this.lab_1_gl = new System.Windows.Forms.Label();
+            this.lab_1_gy = new System.Windows.Forms.Label();
+            this.lab_1_scdlgd = new System.Windows.Forms.Label();
+            this.lbl_1_dcjxjf = new System.Windows.Forms.Label();
+            this.lab_1_xyfdzzdy = new System.Windows.Forms.Label();
+            this.lab_1_dycdzzdy = new System.Windows.Forms.Label();
+            this.lab_1_xycdqsdy = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.txt_1_xhcs = new System.Windows.Forms.TextBox();
+            this.txt_1_fdass = new System.Windows.Forms.TextBox();
+            this.txt_1_fdsj = new System.Windows.Forms.TextBox();
+            this.txt_1_fddl = new System.Windows.Forms.TextBox();
+            this.txt_1_cdsj = new System.Windows.Forms.TextBox();
+            this.txt_1_cddl = new System.Windows.Forms.TextBox();
+            this.txt_1_dcdy = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.cmb_xdcxh1 = new System.Windows.Forms.ComboBox();
+            this.lab_1_yxzt = new System.Windows.Forms.Label();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.btn_1_qrxh = new System.Windows.Forms.Button();
+            this.btn_1_tingzhi = new System.Windows.Forms.Button();
+            this.btn_1_fangdian = new System.Windows.Forms.Button();
+            this.btn_1_chongdian = new System.Windows.Forms.Button();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.groupBox11 = new System.Windows.Forms.GroupBox();
+            this.btn_2_save = new System.Windows.Forms.Button();
+            this.txt_2_shiyankaishishijian = new System.Windows.Forms.TextBox();
+            this.label34 = new System.Windows.Forms.Label();
+            this.txt_2_chuchangbianhao = new System.Windows.Forms.TextBox();
+            this.txt_2_chehao = new System.Windows.Forms.TextBox();
+            this.txt_2_chexing = new System.Windows.Forms.TextBox();
+            this.label39 = new System.Windows.Forms.Label();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.groupBox5 = new System.Windows.Forms.GroupBox();
+            this.lab_2_wdgg = new System.Windows.Forms.Label();
+            this.lab_2_gl = new System.Windows.Forms.Label();
+            this.lab_2_gy = new System.Windows.Forms.Label();
+            this.lab_2_scdlgd = new System.Windows.Forms.Label();
+            this.lab_2_dcjxjf = new System.Windows.Forms.Label();
+            this.lab_2_xyfdzzdy = new System.Windows.Forms.Label();
+            this.lab_2_dycdzzdy = new System.Windows.Forms.Label();
+            this.lab_2_xycdqsdy = new System.Windows.Forms.Label();
+            this.label70 = new System.Windows.Forms.Label();
+            this.label71 = new System.Windows.Forms.Label();
+            this.label72 = new System.Windows.Forms.Label();
+            this.label73 = new System.Windows.Forms.Label();
+            this.label74 = new System.Windows.Forms.Label();
+            this.label75 = new System.Windows.Forms.Label();
+            this.label76 = new System.Windows.Forms.Label();
+            this.label77 = new System.Windows.Forms.Label();
+            this.txt_2_fdass = new System.Windows.Forms.TextBox();
+            this.label78 = new System.Windows.Forms.Label();
+            this.label79 = new System.Windows.Forms.Label();
+            this.lab_2_yxzt = new System.Windows.Forms.Label();
+            this.txt_2_xhcs = new System.Windows.Forms.TextBox();
+            this.txt_2_fdsj = new System.Windows.Forms.TextBox();
+            this.txt_2_fddl = new System.Windows.Forms.TextBox();
+            this.txt_2_cdsj = new System.Windows.Forms.TextBox();
+            this.txt_2_cddl = new System.Windows.Forms.TextBox();
+            this.txt_2_dcdy = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
+            this.label27 = new System.Windows.Forms.Label();
+            this.label28 = new System.Windows.Forms.Label();
+            this.label29 = new System.Windows.Forms.Label();
+            this.label30 = new System.Windows.Forms.Label();
+            this.cmb_xdcxh2 = new System.Windows.Forms.ComboBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.btn_2_qrxh = new System.Windows.Forms.Button();
+            this.btn_2_tingzhi = new System.Windows.Forms.Button();
+            this.btn_2_fangdian = new System.Windows.Forms.Button();
+            this.btn_2_chongdian = new System.Windows.Forms.Button();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.btn_3_save = new System.Windows.Forms.Button();
+            this.txt_3_shiyankaishishijian = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.txt_3_chuchangbianhao = new System.Windows.Forms.TextBox();
+            this.txt_3_chehao = new System.Windows.Forms.TextBox();
+            this.txt_3_chexing = new System.Windows.Forms.TextBox();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label31 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
+            this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btn_quit = new System.Windows.Forms.Button();
+            this.SP_Omron = new System.IO.Ports.SerialPort(this.components);
+            this.timer_1 = new System.Windows.Forms.Timer(this.components);
+            this.timer_2 = new System.Windows.Forms.Timer(this.components);
+            this.timer_3 = new System.Windows.Forms.Timer(this.components);
+            this.timer_chart1 = new System.Windows.Forms.Timer(this.components);
+            this.timer_chart2 = new System.Windows.Forms.Timer(this.components);
+            this.timer_chart3 = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.groupBox3.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.tabControl1.SuspendLayout();
+            this.tabPage1.SuspendLayout();
+            this.groupBox1.SuspendLayout();
+            this.groupBox12.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            this.groupBox4.SuspendLayout();
+            this.groupBox7.SuspendLayout();
+            this.tabPage2.SuspendLayout();
+            this.groupBox2.SuspendLayout();
+            this.groupBox11.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
+            this.groupBox5.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.tabPage3.SuspendLayout();
+            this.groupBox9.SuspendLayout();
+            this.groupBox10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // labTitle
+            // 
+            this.labTitle.AutoSize = true;
+            this.labTitle.Font = new System.Drawing.Font("楷体_GB2312", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.labTitle.Location = new System.Drawing.Point(208, 41);
+            this.labTitle.Name = "labTitle";
+            this.labTitle.Size = new System.Drawing.Size(412, 48);
+            this.labTitle.TabIndex = 141;
+            this.labTitle.Text = "蓄电池充放电系统";
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(3, 3);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(199, 86);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 142;
+            this.pictureBox3.TabStop = false;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.lab_3_wdgg);
+            this.groupBox3.Controls.Add(this.lab_3_gl);
+            this.groupBox3.Controls.Add(this.lab_3_gy);
+            this.groupBox3.Controls.Add(this.lab_3_scdlgd);
+            this.groupBox3.Controls.Add(this.lab_3_dcjxjf);
+            this.groupBox3.Controls.Add(this.lab_3_xyfdzzdy);
+            this.groupBox3.Controls.Add(this.lab_3_dycdzzdy);
+            this.groupBox3.Controls.Add(this.lab_3_xycdqsdy);
+            this.groupBox3.Controls.Add(this.label86);
+            this.groupBox3.Controls.Add(this.label87);
+            this.groupBox3.Controls.Add(this.label88);
+            this.groupBox3.Controls.Add(this.label89);
+            this.groupBox3.Controls.Add(this.label90);
+            this.groupBox3.Controls.Add(this.label91);
+            this.groupBox3.Controls.Add(this.label92);
+            this.groupBox3.Controls.Add(this.label93);
+            this.groupBox3.Controls.Add(this.txt_3_fdass);
+            this.groupBox3.Controls.Add(this.label94);
+            this.groupBox3.Controls.Add(this.label95);
+            this.groupBox3.Controls.Add(this.lab_3_yxzt);
+            this.groupBox3.Controls.Add(this.txt_3_xhcs);
+            this.groupBox3.Controls.Add(this.txt_3_fdsj);
+            this.groupBox3.Controls.Add(this.txt_3_fddl);
+            this.groupBox3.Controls.Add(this.txt_3_cdsj);
+            this.groupBox3.Controls.Add(this.txt_3_cddl);
+            this.groupBox3.Controls.Add(this.txt_3_dcdy);
+            this.groupBox3.Controls.Add(this.label32);
+            this.groupBox3.Controls.Add(this.label33);
+            this.groupBox3.Controls.Add(this.label35);
+            this.groupBox3.Controls.Add(this.label36);
+            this.groupBox3.Controls.Add(this.label37);
+            this.groupBox3.Controls.Add(this.label38);
+            this.groupBox3.Controls.Add(this.label40);
+            this.groupBox3.Controls.Add(this.label41);
+            this.groupBox3.Controls.Add(this.label42);
+            this.groupBox3.Controls.Add(this.label43);
+            this.groupBox3.Controls.Add(this.label44);
+            this.groupBox3.Controls.Add(this.label45);
+            this.groupBox3.Controls.Add(this.label46);
+            this.groupBox3.Controls.Add(this.cmb_xdcxh3);
+            this.groupBox3.Font = new System.Drawing.Font("宋体", 9F);
+            this.groupBox3.Location = new System.Drawing.Point(6, 6);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(322, 564);
+            this.groupBox3.TabIndex = 144;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "3#通道参数";
+            // 
+            // lab_3_wdgg
+            // 
+            this.lab_3_wdgg.BackColor = System.Drawing.Color.White;
+            this.lab_3_wdgg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_3_wdgg.Location = new System.Drawing.Point(288, 533);
+            this.lab_3_wdgg.Name = "lab_3_wdgg";
+            this.lab_3_wdgg.Size = new System.Drawing.Size(23, 23);
+            this.lab_3_wdgg.TabIndex = 77;
+            this.lab_3_wdgg.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_3_gl
+            // 
+            this.lab_3_gl.BackColor = System.Drawing.Color.White;
+            this.lab_3_gl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_3_gl.Location = new System.Drawing.Point(288, 511);
+            this.lab_3_gl.Name = "lab_3_gl";
+            this.lab_3_gl.Size = new System.Drawing.Size(23, 23);
+            this.lab_3_gl.TabIndex = 78;
+            this.lab_3_gl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_3_gy
+            // 
+            this.lab_3_gy.BackColor = System.Drawing.Color.White;
+            this.lab_3_gy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_3_gy.Location = new System.Drawing.Point(288, 489);
+            this.lab_3_gy.Name = "lab_3_gy";
+            this.lab_3_gy.Size = new System.Drawing.Size(23, 23);
+            this.lab_3_gy.TabIndex = 75;
+            this.lab_3_gy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_3_scdlgd
+            // 
+            this.lab_3_scdlgd.BackColor = System.Drawing.Color.White;
+            this.lab_3_scdlgd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_3_scdlgd.Location = new System.Drawing.Point(288, 467);
+            this.lab_3_scdlgd.Name = "lab_3_scdlgd";
+            this.lab_3_scdlgd.Size = new System.Drawing.Size(23, 23);
+            this.lab_3_scdlgd.TabIndex = 76;
+            this.lab_3_scdlgd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_3_dcjxjf
+            // 
+            this.lab_3_dcjxjf.BackColor = System.Drawing.Color.White;
+            this.lab_3_dcjxjf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_3_dcjxjf.Location = new System.Drawing.Point(288, 445);
+            this.lab_3_dcjxjf.Name = "lab_3_dcjxjf";
+            this.lab_3_dcjxjf.Size = new System.Drawing.Size(23, 23);
+            this.lab_3_dcjxjf.TabIndex = 81;
+            this.lab_3_dcjxjf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_3_xyfdzzdy
+            // 
+            this.lab_3_xyfdzzdy.BackColor = System.Drawing.Color.White;
+            this.lab_3_xyfdzzdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_3_xyfdzzdy.Location = new System.Drawing.Point(288, 423);
+            this.lab_3_xyfdzzdy.Name = "lab_3_xyfdzzdy";
+            this.lab_3_xyfdzzdy.Size = new System.Drawing.Size(23, 23);
+            this.lab_3_xyfdzzdy.TabIndex = 82;
+            this.lab_3_xyfdzzdy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_3_dycdzzdy
+            // 
+            this.lab_3_dycdzzdy.BackColor = System.Drawing.Color.White;
+            this.lab_3_dycdzzdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_3_dycdzzdy.Location = new System.Drawing.Point(288, 401);
+            this.lab_3_dycdzzdy.Name = "lab_3_dycdzzdy";
+            this.lab_3_dycdzzdy.Size = new System.Drawing.Size(23, 23);
+            this.lab_3_dycdzzdy.TabIndex = 79;
+            this.lab_3_dycdzzdy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_3_xycdqsdy
+            // 
+            this.lab_3_xycdqsdy.BackColor = System.Drawing.Color.White;
+            this.lab_3_xycdqsdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_3_xycdqsdy.Location = new System.Drawing.Point(288, 379);
+            this.lab_3_xycdqsdy.Name = "lab_3_xycdqsdy";
+            this.lab_3_xycdqsdy.Size = new System.Drawing.Size(23, 23);
+            this.lab_3_xycdqsdy.TabIndex = 80;
+            this.lab_3_xycdqsdy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label86
+            // 
+            this.label86.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label86.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label86.Location = new System.Drawing.Point(163, 533);
+            this.label86.Name = "label86";
+            this.label86.Size = new System.Drawing.Size(119, 23);
+            this.label86.TabIndex = 74;
+            this.label86.Text = "温度过高";
+            this.label86.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label87
+            // 
+            this.label87.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label87.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label87.Location = new System.Drawing.Point(163, 511);
+            this.label87.Name = "label87";
+            this.label87.Size = new System.Drawing.Size(119, 23);
+            this.label87.TabIndex = 73;
+            this.label87.Text = "过流";
+            this.label87.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label88
+            // 
+            this.label88.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label88.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label88.Location = new System.Drawing.Point(163, 489);
+            this.label88.Name = "label88";
+            this.label88.Size = new System.Drawing.Size(119, 23);
+            this.label88.TabIndex = 72;
+            this.label88.Text = "过压";
+            this.label88.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label89
+            // 
+            this.label89.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label89.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label89.Location = new System.Drawing.Point(163, 467);
+            this.label89.Name = "label89";
+            this.label89.Size = new System.Drawing.Size(119, 23);
+            this.label89.TabIndex = 71;
+            this.label89.Text = "输出电流过大";
+            this.label89.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label90
+            // 
+            this.label90.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label90.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label90.Location = new System.Drawing.Point(163, 445);
+            this.label90.Name = "label90";
+            this.label90.Size = new System.Drawing.Size(119, 23);
+            this.label90.TabIndex = 70;
+            this.label90.Text = "电池极性接反";
+            this.label90.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label91
+            // 
+            this.label91.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label91.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label91.Location = new System.Drawing.Point(163, 423);
+            this.label91.Name = "label91";
+            this.label91.Size = new System.Drawing.Size(119, 23);
+            this.label91.TabIndex = 69;
+            this.label91.Text = "小于放电终止电压";
+            this.label91.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label92
+            // 
+            this.label92.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label92.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label92.Location = new System.Drawing.Point(163, 401);
+            this.label92.Name = "label92";
+            this.label92.Size = new System.Drawing.Size(119, 23);
+            this.label92.TabIndex = 68;
+            this.label92.Text = "大于充电终止电压";
+            this.label92.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label93
+            // 
+            this.label93.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.label93.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label93.Location = new System.Drawing.Point(163, 379);
+            this.label93.Name = "label93";
+            this.label93.Size = new System.Drawing.Size(119, 23);
+            this.label93.TabIndex = 67;
+            this.label93.Text = "小于充电起始电压";
+            this.label93.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txt_3_fdass
+            // 
+            this.txt_3_fdass.BackColor = System.Drawing.Color.White;
+            this.txt_3_fdass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_3_fdass.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_3_fdass.Location = new System.Drawing.Point(9, 401);
+            this.txt_3_fdass.Name = "txt_3_fdass";
+            this.txt_3_fdass.ReadOnly = true;
+            this.txt_3_fdass.Size = new System.Drawing.Size(148, 53);
+            this.txt_3_fdass.TabIndex = 66;
+            this.txt_3_fdass.Text = "0";
+            this.txt_3_fdass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label94
+            // 
+            this.label94.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label94.Location = new System.Drawing.Point(9, 453);
+            this.label94.Name = "label94";
+            this.label94.Size = new System.Drawing.Size(148, 22);
+            this.label94.TabIndex = 65;
+            this.label94.Text = "（Ah）";
+            this.label94.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label95
+            // 
+            this.label95.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label95.Location = new System.Drawing.Point(9, 379);
+            this.label95.Name = "label95";
+            this.label95.Size = new System.Drawing.Size(148, 23);
+            this.label95.TabIndex = 64;
+            this.label95.Text = "放电安时数";
+            this.label95.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lab_3_yxzt
+            // 
+            this.lab_3_yxzt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_3_yxzt.Location = new System.Drawing.Point(9, 486);
+            this.lab_3_yxzt.Name = "lab_3_yxzt";
+            this.lab_3_yxzt.Size = new System.Drawing.Size(148, 70);
+            this.lab_3_yxzt.TabIndex = 63;
+            this.lab_3_yxzt.Text = "运行状态：待机";
+            this.lab_3_yxzt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_3_xhcs
+            // 
+            this.txt_3_xhcs.BackColor = System.Drawing.Color.White;
+            this.txt_3_xhcs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_3_xhcs.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_3_xhcs.Location = new System.Drawing.Point(163, 67);
+            this.txt_3_xhcs.Name = "txt_3_xhcs";
+            this.txt_3_xhcs.ReadOnly = true;
+            this.txt_3_xhcs.Size = new System.Drawing.Size(148, 53);
+            this.txt_3_xhcs.TabIndex = 49;
+            this.txt_3_xhcs.Text = "0";
+            this.txt_3_xhcs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_3_fdsj
+            // 
+            this.txt_3_fdsj.BackColor = System.Drawing.Color.White;
+            this.txt_3_fdsj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_3_fdsj.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_3_fdsj.Location = new System.Drawing.Point(9, 289);
+            this.txt_3_fdsj.Name = "txt_3_fdsj";
+            this.txt_3_fdsj.ReadOnly = true;
+            this.txt_3_fdsj.Size = new System.Drawing.Size(148, 53);
+            this.txt_3_fdsj.TabIndex = 47;
+            this.txt_3_fdsj.Text = "0";
+            this.txt_3_fdsj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_3_fddl
+            // 
+            this.txt_3_fddl.BackColor = System.Drawing.Color.White;
+            this.txt_3_fddl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_3_fddl.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_3_fddl.Location = new System.Drawing.Point(163, 289);
+            this.txt_3_fddl.Name = "txt_3_fddl";
+            this.txt_3_fddl.ReadOnly = true;
+            this.txt_3_fddl.Size = new System.Drawing.Size(148, 53);
+            this.txt_3_fddl.TabIndex = 52;
+            this.txt_3_fddl.Text = "0";
+            this.txt_3_fddl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_3_cdsj
+            // 
+            this.txt_3_cdsj.BackColor = System.Drawing.Color.White;
+            this.txt_3_cdsj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_3_cdsj.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_3_cdsj.Location = new System.Drawing.Point(9, 178);
+            this.txt_3_cdsj.Name = "txt_3_cdsj";
+            this.txt_3_cdsj.ReadOnly = true;
+            this.txt_3_cdsj.Size = new System.Drawing.Size(148, 53);
+            this.txt_3_cdsj.TabIndex = 53;
+            this.txt_3_cdsj.Text = "0";
+            this.txt_3_cdsj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_3_cddl
+            // 
+            this.txt_3_cddl.BackColor = System.Drawing.Color.White;
+            this.txt_3_cddl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_3_cddl.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_3_cddl.Location = new System.Drawing.Point(163, 178);
+            this.txt_3_cddl.Name = "txt_3_cddl";
+            this.txt_3_cddl.ReadOnly = true;
+            this.txt_3_cddl.Size = new System.Drawing.Size(148, 53);
+            this.txt_3_cddl.TabIndex = 50;
+            this.txt_3_cddl.Text = "0";
+            this.txt_3_cddl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_3_dcdy
+            // 
+            this.txt_3_dcdy.BackColor = System.Drawing.Color.White;
+            this.txt_3_dcdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_3_dcdy.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_3_dcdy.Location = new System.Drawing.Point(9, 67);
+            this.txt_3_dcdy.Name = "txt_3_dcdy";
+            this.txt_3_dcdy.ReadOnly = true;
+            this.txt_3_dcdy.Size = new System.Drawing.Size(148, 53);
+            this.txt_3_dcdy.TabIndex = 51;
+            this.txt_3_dcdy.Text = "0";
+            this.txt_3_dcdy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label32
+            // 
+            this.label32.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label32.Location = new System.Drawing.Point(163, 341);
+            this.label32.Name = "label32";
+            this.label32.Size = new System.Drawing.Size(148, 22);
+            this.label32.TabIndex = 43;
+            this.label32.Text = "（A）";
+            this.label32.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label33
+            // 
+            this.label33.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label33.Location = new System.Drawing.Point(163, 119);
+            this.label33.Name = "label33";
+            this.label33.Size = new System.Drawing.Size(148, 22);
+            this.label33.TabIndex = 46;
+            this.label33.Text = "（次）";
+            this.label33.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label35
+            // 
+            this.label35.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label35.Location = new System.Drawing.Point(163, 230);
+            this.label35.Name = "label35";
+            this.label35.Size = new System.Drawing.Size(148, 22);
+            this.label35.TabIndex = 44;
+            this.label35.Text = "（A）";
+            this.label35.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label36
+            // 
+            this.label36.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label36.Location = new System.Drawing.Point(9, 341);
+            this.label36.Name = "label36";
+            this.label36.Size = new System.Drawing.Size(148, 22);
+            this.label36.TabIndex = 37;
+            this.label36.Text = "（Min）";
+            this.label36.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label37
+            // 
+            this.label37.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label37.Location = new System.Drawing.Point(163, 45);
+            this.label37.Name = "label37";
+            this.label37.Size = new System.Drawing.Size(148, 23);
+            this.label37.TabIndex = 35;
+            this.label37.Text = "循环次数";
+            this.label37.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label38
+            // 
+            this.label38.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label38.Location = new System.Drawing.Point(163, 267);
+            this.label38.Name = "label38";
+            this.label38.Size = new System.Drawing.Size(148, 23);
+            this.label38.TabIndex = 33;
+            this.label38.Text = "放电电流";
+            this.label38.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label40
+            // 
+            this.label40.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label40.Location = new System.Drawing.Point(9, 230);
+            this.label40.Name = "label40";
+            this.label40.Size = new System.Drawing.Size(148, 22);
+            this.label40.TabIndex = 41;
+            this.label40.Text = "（Min）";
+            this.label40.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label41
+            // 
+            this.label41.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label41.Location = new System.Drawing.Point(9, 267);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(148, 23);
+            this.label41.TabIndex = 42;
+            this.label41.Text = "放电时间";
+            this.label41.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label42
+            // 
+            this.label42.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label42.Location = new System.Drawing.Point(163, 156);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(148, 23);
+            this.label42.TabIndex = 40;
+            this.label42.Text = "充电电流";
+            this.label42.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label43
+            // 
+            this.label43.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label43.Location = new System.Drawing.Point(9, 156);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(148, 23);
+            this.label43.TabIndex = 38;
+            this.label43.Text = "充电时间";
+            this.label43.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label44
+            // 
+            this.label44.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label44.Location = new System.Drawing.Point(9, 119);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(148, 22);
+            this.label44.TabIndex = 39;
+            this.label44.Text = "（V）";
+            this.label44.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label45
+            // 
+            this.label45.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label45.Location = new System.Drawing.Point(9, 45);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(148, 23);
+            this.label45.TabIndex = 36;
+            this.label45.Text = "电池电压";
+            this.label45.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.label46.Location = new System.Drawing.Point(8, 20);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(162, 12);
+            this.label46.TabIndex = 32;
+            this.label46.Text = "请选择3#通道蓄电池型号：";
+            // 
+            // cmb_xdcxh3
+            // 
+            this.cmb_xdcxh3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_xdcxh3.FormattingEnabled = true;
+            this.cmb_xdcxh3.Location = new System.Drawing.Point(175, 15);
+            this.cmb_xdcxh3.Name = "cmb_xdcxh3";
+            this.cmb_xdcxh3.Size = new System.Drawing.Size(121, 20);
+            this.cmb_xdcxh3.TabIndex = 31;
+            this.cmb_xdcxh3.SelectedIndexChanged += new System.EventHandler(this.cmb_xdcxh3_SelectedIndexChanged);
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.btn_3_qrxh);
+            this.groupBox6.Controls.Add(this.btn_3_tingzhi);
+            this.groupBox6.Controls.Add(this.btn_3_fangdian);
+            this.groupBox6.Controls.Add(this.btn_3_chongdian);
+            this.groupBox6.Location = new System.Drawing.Point(6, 582);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(322, 93);
+            this.groupBox6.TabIndex = 146;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "3#通道操作";
+            // 
+            // btn_3_qrxh
+            // 
+            this.btn_3_qrxh.Location = new System.Drawing.Point(15, 16);
+            this.btn_3_qrxh.Name = "btn_3_qrxh";
+            this.btn_3_qrxh.Size = new System.Drawing.Size(70, 70);
+            this.btn_3_qrxh.TabIndex = 7;
+            this.btn_3_qrxh.Text = "确认型号";
+            this.btn_3_qrxh.UseVisualStyleBackColor = true;
+            this.btn_3_qrxh.Click += new System.EventHandler(this.btn_3_qrxh_Click);
+            // 
+            // btn_3_tingzhi
+            // 
+            this.btn_3_tingzhi.Location = new System.Drawing.Point(237, 16);
+            this.btn_3_tingzhi.Name = "btn_3_tingzhi";
+            this.btn_3_tingzhi.Size = new System.Drawing.Size(70, 70);
+            this.btn_3_tingzhi.TabIndex = 6;
+            this.btn_3_tingzhi.Text = "停止";
+            this.btn_3_tingzhi.UseVisualStyleBackColor = true;
+            this.btn_3_tingzhi.Click += new System.EventHandler(this.btn_3_tingzhi_Click);
+            // 
+            // btn_3_fangdian
+            // 
+            this.btn_3_fangdian.Location = new System.Drawing.Point(163, 16);
+            this.btn_3_fangdian.Name = "btn_3_fangdian";
+            this.btn_3_fangdian.Size = new System.Drawing.Size(70, 70);
+            this.btn_3_fangdian.TabIndex = 5;
+            this.btn_3_fangdian.Text = "放电";
+            this.btn_3_fangdian.UseVisualStyleBackColor = true;
+            this.btn_3_fangdian.Click += new System.EventHandler(this.btn_3_fangdian_Click);
+            // 
+            // btn_3_chongdian
+            // 
+            this.btn_3_chongdian.Location = new System.Drawing.Point(89, 16);
+            this.btn_3_chongdian.Name = "btn_3_chongdian";
+            this.btn_3_chongdian.Size = new System.Drawing.Size(70, 70);
+            this.btn_3_chongdian.TabIndex = 4;
+            this.btn_3_chongdian.Text = "充电";
+            this.btn_3_chongdian.UseVisualStyleBackColor = true;
+            this.btn_3_chongdian.Click += new System.EventHandler(this.btn_3_chongdian_Click);
+            // 
+            // tabControl1
+            // 
+            this.tabControl1.Controls.Add(this.tabPage1);
+            this.tabControl1.Controls.Add(this.tabPage2);
+            this.tabControl1.Controls.Add(this.tabPage3);
+            this.tabControl1.Location = new System.Drawing.Point(3, 95);
+            this.tabControl1.Name = "tabControl1";
+            this.tabControl1.SelectedIndex = 0;
+            this.tabControl1.Size = new System.Drawing.Size(1152, 705);
+            this.tabControl1.TabIndex = 147;
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.groupBox1);
+            this.tabPage1.Controls.Add(this.groupBox4);
+            this.tabPage1.Controls.Add(this.groupBox7);
+            this.tabPage1.Location = new System.Drawing.Point(4, 21);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(1144, 680);
+            this.tabPage1.TabIndex = 0;
+            this.tabPage1.Text = "1#通道";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.groupBox12);
+            this.groupBox1.Controls.Add(this.chart1);
+            this.groupBox1.Font = new System.Drawing.Font("宋体", 9F);
+            this.groupBox1.Location = new System.Drawing.Point(337, 6);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(801, 669);
+            this.groupBox1.TabIndex = 150;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "1#通道曲线图";
+            // 
+            // groupBox12
+            // 
+            this.groupBox12.Controls.Add(this.txt_1_shiyankaishishijian);
+            this.groupBox12.Controls.Add(this.btn_1_save);
+            this.groupBox12.Controls.Add(this.label59);
+            this.groupBox12.Controls.Add(this.txt_1_chuchangbianhao);
+            this.groupBox12.Controls.Add(this.txt_1_chehao);
+            this.groupBox12.Controls.Add(this.txt_1_chexing);
+            this.groupBox12.Controls.Add(this.label48);
+            this.groupBox12.Controls.Add(this.label57);
+            this.groupBox12.Controls.Add(this.label58);
+            this.groupBox12.Location = new System.Drawing.Point(8, 576);
+            this.groupBox12.Name = "groupBox12";
+            this.groupBox12.Size = new System.Drawing.Size(789, 89);
+            this.groupBox12.TabIndex = 148;
+            this.groupBox12.TabStop = false;
+            this.groupBox12.Text = "1#试验工况";
+            // 
+            // txt_1_shiyankaishishijian
+            // 
+            this.txt_1_shiyankaishishijian.Location = new System.Drawing.Point(296, 55);
+            this.txt_1_shiyankaishishijian.Name = "txt_1_shiyankaishishijian";
+            this.txt_1_shiyankaishishijian.ReadOnly = true;
+            this.txt_1_shiyankaishishijian.Size = new System.Drawing.Size(100, 21);
+            this.txt_1_shiyankaishishijian.TabIndex = 152;
+            // 
+            // btn_1_save
+            // 
+            this.btn_1_save.Location = new System.Drawing.Point(665, 32);
+            this.btn_1_save.Name = "btn_1_save";
+            this.btn_1_save.Size = new System.Drawing.Size(100, 38);
+            this.btn_1_save.TabIndex = 148;
+            this.btn_1_save.Text = "保存数据";
+            this.btn_1_save.UseVisualStyleBackColor = true;
+            this.btn_1_save.Click += new System.EventHandler(this.btn_1_save_Click);
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.Location = new System.Drawing.Point(207, 59);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(83, 12);
+            this.label59.TabIndex = 151;
+            this.label59.Text = "试验开始时间:";
+            // 
+            // txt_1_chuchangbianhao
+            // 
+            this.txt_1_chuchangbianhao.Location = new System.Drawing.Point(79, 55);
+            this.txt_1_chuchangbianhao.Name = "txt_1_chuchangbianhao";
+            this.txt_1_chuchangbianhao.Size = new System.Drawing.Size(100, 21);
+            this.txt_1_chuchangbianhao.TabIndex = 150;
+            // 
+            // txt_1_chehao
+            // 
+            this.txt_1_chehao.Location = new System.Drawing.Point(296, 20);
+            this.txt_1_chehao.Name = "txt_1_chehao";
+            this.txt_1_chehao.Size = new System.Drawing.Size(100, 21);
+            this.txt_1_chehao.TabIndex = 149;
+            // 
+            // txt_1_chexing
+            // 
+            this.txt_1_chexing.Location = new System.Drawing.Point(78, 20);
+            this.txt_1_chexing.Name = "txt_1_chexing";
+            this.txt_1_chexing.Size = new System.Drawing.Size(100, 21);
+            this.txt_1_chexing.TabIndex = 148;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Location = new System.Drawing.Point(14, 59);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(59, 12);
+            this.label48.TabIndex = 2;
+            this.label48.Text = "出厂编号:";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.Location = new System.Drawing.Point(255, 24);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(35, 12);
+            this.label57.TabIndex = 1;
+            this.label57.Text = "车号:";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.Location = new System.Drawing.Point(37, 23);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(35, 12);
+            this.label58.TabIndex = 0;
+            this.label58.Text = "车型:";
+            // 
+            // chart1
+            // 
+            chartArea13.AxisX.Interval = 100;
+            chartArea13.AxisX.Maximum = 1000;
+            chartArea13.AxisX.Minimum = 0;
+            chartArea13.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea13.AxisX.Title = "时间(Min)";
+            chartArea13.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea13.AxisY.Interval = 20;
+            chartArea13.AxisY.Maximum = 220;
+            chartArea13.AxisY.Minimum = 0;
+            chartArea13.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Stacked;
+            chartArea13.AxisY.Title = "电压V";
+            chartArea13.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea13.Name = "ChartArea1";
+            chartArea14.AxisX.Interval = 100;
+            chartArea14.AxisX.Maximum = 1000;
+            chartArea14.AxisX.Minimum = 0;
+            chartArea14.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea14.AxisX.Title = "时间(Min)";
+            chartArea14.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea14.AxisY.Maximum = 100;
+            chartArea14.AxisY.Minimum = 0;
+            chartArea14.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Stacked;
+            chartArea14.AxisY.Title = "电流A";
+            chartArea14.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea14.Name = "ChartArea2";
+            chartArea15.AxisX.Interval = 100;
+            chartArea15.AxisX.Maximum = 1000;
+            chartArea15.AxisX.Minimum = 0;
+            chartArea15.AxisX.Title = "时间(Min)";
+            chartArea15.AxisY.Interval = 20;
+            chartArea15.AxisY.Maximum = 80;
+            chartArea15.AxisY.Minimum = 0;
+            chartArea15.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Stacked;
+            chartArea15.AxisY.Title = "安时数Ah";
+            chartArea15.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea15.Name = "ChartArea3";
+            this.chart1.ChartAreas.Add(chartArea13);
+            this.chart1.ChartAreas.Add(chartArea14);
+            this.chart1.ChartAreas.Add(chartArea15);
+            legend5.Name = "Legend1";
+            this.chart1.Legends.Add(legend5);
+            this.chart1.Location = new System.Drawing.Point(3, 17);
+            this.chart1.Name = "chart1";
+            series17.ChartArea = "ChartArea1";
+            series17.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series17.Legend = "Legend1";
+            series17.Name = "电压曲线";
+            series18.ChartArea = "ChartArea2";
+            series18.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series18.Legend = "Legend1";
+            series18.Name = "充电电流曲线";
+            series19.ChartArea = "ChartArea3";
+            series19.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series19.Legend = "Legend1";
+            series19.Name = "安时数曲线";
+            series20.ChartArea = "ChartArea2";
+            series20.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series20.Legend = "Legend1";
+            series20.Name = "放电电流曲线";
+            this.chart1.Series.Add(series17);
+            this.chart1.Series.Add(series18);
+            this.chart1.Series.Add(series19);
+            this.chart1.Series.Add(series20);
+            this.chart1.Size = new System.Drawing.Size(795, 547);
+            this.chart1.TabIndex = 1;
+            this.chart1.Text = "chart1";
+            // 
+            // groupBox4
+            // 
+            this.groupBox4.Controls.Add(this.lab_1_wdgg);
+            this.groupBox4.Controls.Add(this.lab_1_gl);
+            this.groupBox4.Controls.Add(this.lab_1_gy);
+            this.groupBox4.Controls.Add(this.lab_1_scdlgd);
+            this.groupBox4.Controls.Add(this.lbl_1_dcjxjf);
+            this.groupBox4.Controls.Add(this.lab_1_xyfdzzdy);
+            this.groupBox4.Controls.Add(this.lab_1_dycdzzdy);
+            this.groupBox4.Controls.Add(this.lab_1_xycdqsdy);
+            this.groupBox4.Controls.Add(this.label56);
+            this.groupBox4.Controls.Add(this.label55);
+            this.groupBox4.Controls.Add(this.label54);
+            this.groupBox4.Controls.Add(this.label53);
+            this.groupBox4.Controls.Add(this.label52);
+            this.groupBox4.Controls.Add(this.label51);
+            this.groupBox4.Controls.Add(this.label50);
+            this.groupBox4.Controls.Add(this.label49);
+            this.groupBox4.Controls.Add(this.txt_1_xhcs);
+            this.groupBox4.Controls.Add(this.txt_1_fdass);
+            this.groupBox4.Controls.Add(this.txt_1_fdsj);
+            this.groupBox4.Controls.Add(this.txt_1_fddl);
+            this.groupBox4.Controls.Add(this.txt_1_cdsj);
+            this.groupBox4.Controls.Add(this.txt_1_cddl);
+            this.groupBox4.Controls.Add(this.txt_1_dcdy);
+            this.groupBox4.Controls.Add(this.label1);
+            this.groupBox4.Controls.Add(this.label2);
+            this.groupBox4.Controls.Add(this.label3);
+            this.groupBox4.Controls.Add(this.label4);
+            this.groupBox4.Controls.Add(this.label5);
+            this.groupBox4.Controls.Add(this.label6);
+            this.groupBox4.Controls.Add(this.label7);
+            this.groupBox4.Controls.Add(this.label8);
+            this.groupBox4.Controls.Add(this.label9);
+            this.groupBox4.Controls.Add(this.label10);
+            this.groupBox4.Controls.Add(this.label11);
+            this.groupBox4.Controls.Add(this.label12);
+            this.groupBox4.Controls.Add(this.label13);
+            this.groupBox4.Controls.Add(this.label14);
+            this.groupBox4.Controls.Add(this.label15);
+            this.groupBox4.Controls.Add(this.cmb_xdcxh1);
+            this.groupBox4.Controls.Add(this.lab_1_yxzt);
+            this.groupBox4.Font = new System.Drawing.Font("宋体", 9F);
+            this.groupBox4.Location = new System.Drawing.Point(6, 6);
+            this.groupBox4.Name = "groupBox4";
+            this.groupBox4.Size = new System.Drawing.Size(322, 564);
+            this.groupBox4.TabIndex = 148;
+            this.groupBox4.TabStop = false;
+            this.groupBox4.Text = "1#通道参数";
+            // 
+            // lab_1_wdgg
+            // 
+            this.lab_1_wdgg.BackColor = System.Drawing.Color.White;
+            this.lab_1_wdgg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_1_wdgg.Location = new System.Drawing.Point(288, 533);
+            this.lab_1_wdgg.Name = "lab_1_wdgg";
+            this.lab_1_wdgg.Size = new System.Drawing.Size(23, 23);
+            this.lab_1_wdgg.TabIndex = 62;
+            this.lab_1_wdgg.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_1_gl
+            // 
+            this.lab_1_gl.BackColor = System.Drawing.Color.White;
+            this.lab_1_gl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_1_gl.Location = new System.Drawing.Point(288, 511);
+            this.lab_1_gl.Name = "lab_1_gl";
+            this.lab_1_gl.Size = new System.Drawing.Size(23, 23);
+            this.lab_1_gl.TabIndex = 62;
+            this.lab_1_gl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_1_gy
+            // 
+            this.lab_1_gy.BackColor = System.Drawing.Color.White;
+            this.lab_1_gy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_1_gy.Location = new System.Drawing.Point(288, 489);
+            this.lab_1_gy.Name = "lab_1_gy";
+            this.lab_1_gy.Size = new System.Drawing.Size(23, 23);
+            this.lab_1_gy.TabIndex = 62;
+            this.lab_1_gy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_1_scdlgd
+            // 
+            this.lab_1_scdlgd.BackColor = System.Drawing.Color.White;
+            this.lab_1_scdlgd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_1_scdlgd.Location = new System.Drawing.Point(288, 467);
+            this.lab_1_scdlgd.Name = "lab_1_scdlgd";
+            this.lab_1_scdlgd.Size = new System.Drawing.Size(23, 23);
+            this.lab_1_scdlgd.TabIndex = 62;
+            this.lab_1_scdlgd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lbl_1_dcjxjf
+            // 
+            this.lbl_1_dcjxjf.BackColor = System.Drawing.Color.White;
+            this.lbl_1_dcjxjf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbl_1_dcjxjf.Location = new System.Drawing.Point(288, 445);
+            this.lbl_1_dcjxjf.Name = "lbl_1_dcjxjf";
+            this.lbl_1_dcjxjf.Size = new System.Drawing.Size(23, 23);
+            this.lbl_1_dcjxjf.TabIndex = 62;
+            this.lbl_1_dcjxjf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_1_xyfdzzdy
+            // 
+            this.lab_1_xyfdzzdy.BackColor = System.Drawing.Color.White;
+            this.lab_1_xyfdzzdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_1_xyfdzzdy.Location = new System.Drawing.Point(288, 423);
+            this.lab_1_xyfdzzdy.Name = "lab_1_xyfdzzdy";
+            this.lab_1_xyfdzzdy.Size = new System.Drawing.Size(23, 23);
+            this.lab_1_xyfdzzdy.TabIndex = 62;
+            this.lab_1_xyfdzzdy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_1_dycdzzdy
+            // 
+            this.lab_1_dycdzzdy.BackColor = System.Drawing.Color.White;
+            this.lab_1_dycdzzdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_1_dycdzzdy.Location = new System.Drawing.Point(288, 401);
+            this.lab_1_dycdzzdy.Name = "lab_1_dycdzzdy";
+            this.lab_1_dycdzzdy.Size = new System.Drawing.Size(23, 23);
+            this.lab_1_dycdzzdy.TabIndex = 62;
+            this.lab_1_dycdzzdy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_1_xycdqsdy
+            // 
+            this.lab_1_xycdqsdy.BackColor = System.Drawing.Color.White;
+            this.lab_1_xycdqsdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_1_xycdqsdy.Location = new System.Drawing.Point(288, 379);
+            this.lab_1_xycdqsdy.Name = "lab_1_xycdqsdy";
+            this.lab_1_xycdqsdy.Size = new System.Drawing.Size(23, 23);
+            this.lab_1_xycdqsdy.TabIndex = 62;
+            this.lab_1_xycdqsdy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label56
+            // 
+            this.label56.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label56.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label56.Location = new System.Drawing.Point(163, 533);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(119, 23);
+            this.label56.TabIndex = 61;
+            this.label56.Text = "温度过高";
+            this.label56.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label55
+            // 
+            this.label55.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label55.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label55.Location = new System.Drawing.Point(163, 511);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(119, 23);
+            this.label55.TabIndex = 60;
+            this.label55.Text = "过流";
+            this.label55.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label54
+            // 
+            this.label54.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label54.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label54.Location = new System.Drawing.Point(163, 489);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(119, 23);
+            this.label54.TabIndex = 59;
+            this.label54.Text = "过压";
+            this.label54.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label53
+            // 
+            this.label53.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label53.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label53.Location = new System.Drawing.Point(163, 467);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(119, 23);
+            this.label53.TabIndex = 58;
+            this.label53.Text = "输出电流过大";
+            this.label53.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label52
+            // 
+            this.label52.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label52.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label52.Location = new System.Drawing.Point(163, 445);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(119, 23);
+            this.label52.TabIndex = 57;
+            this.label52.Text = "电池极性接反";
+            this.label52.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label51
+            // 
+            this.label51.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label51.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label51.Location = new System.Drawing.Point(163, 423);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(119, 23);
+            this.label51.TabIndex = 56;
+            this.label51.Text = "小于放电终止电压";
+            this.label51.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label50
+            // 
+            this.label50.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label50.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label50.Location = new System.Drawing.Point(163, 401);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(119, 23);
+            this.label50.TabIndex = 55;
+            this.label50.Text = "大于充电终止电压";
+            this.label50.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label49
+            // 
+            this.label49.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.label49.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label49.Location = new System.Drawing.Point(163, 379);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(119, 23);
+            this.label49.TabIndex = 54;
+            this.label49.Text = "小于充电起始电压";
+            this.label49.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txt_1_xhcs
+            // 
+            this.txt_1_xhcs.BackColor = System.Drawing.Color.White;
+            this.txt_1_xhcs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_1_xhcs.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_1_xhcs.Location = new System.Drawing.Point(163, 67);
+            this.txt_1_xhcs.Name = "txt_1_xhcs";
+            this.txt_1_xhcs.ReadOnly = true;
+            this.txt_1_xhcs.Size = new System.Drawing.Size(148, 53);
+            this.txt_1_xhcs.TabIndex = 49;
+            this.txt_1_xhcs.Text = "0";
+            this.txt_1_xhcs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_1_fdass
+            // 
+            this.txt_1_fdass.BackColor = System.Drawing.Color.White;
+            this.txt_1_fdass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_1_fdass.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_1_fdass.Location = new System.Drawing.Point(9, 401);
+            this.txt_1_fdass.Name = "txt_1_fdass";
+            this.txt_1_fdass.ReadOnly = true;
+            this.txt_1_fdass.Size = new System.Drawing.Size(148, 53);
+            this.txt_1_fdass.TabIndex = 48;
+            this.txt_1_fdass.Text = "0";
+            this.txt_1_fdass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_1_fdsj
+            // 
+            this.txt_1_fdsj.BackColor = System.Drawing.Color.White;
+            this.txt_1_fdsj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_1_fdsj.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_1_fdsj.Location = new System.Drawing.Point(9, 289);
+            this.txt_1_fdsj.Name = "txt_1_fdsj";
+            this.txt_1_fdsj.ReadOnly = true;
+            this.txt_1_fdsj.Size = new System.Drawing.Size(148, 53);
+            this.txt_1_fdsj.TabIndex = 47;
+            this.txt_1_fdsj.Text = "0";
+            this.txt_1_fdsj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_1_fddl
+            // 
+            this.txt_1_fddl.BackColor = System.Drawing.Color.White;
+            this.txt_1_fddl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_1_fddl.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_1_fddl.Location = new System.Drawing.Point(163, 289);
+            this.txt_1_fddl.Name = "txt_1_fddl";
+            this.txt_1_fddl.ReadOnly = true;
+            this.txt_1_fddl.Size = new System.Drawing.Size(148, 53);
+            this.txt_1_fddl.TabIndex = 52;
+            this.txt_1_fddl.Text = "0";
+            this.txt_1_fddl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_1_cdsj
+            // 
+            this.txt_1_cdsj.BackColor = System.Drawing.Color.White;
+            this.txt_1_cdsj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_1_cdsj.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_1_cdsj.Location = new System.Drawing.Point(9, 178);
+            this.txt_1_cdsj.Name = "txt_1_cdsj";
+            this.txt_1_cdsj.ReadOnly = true;
+            this.txt_1_cdsj.Size = new System.Drawing.Size(148, 53);
+            this.txt_1_cdsj.TabIndex = 53;
+            this.txt_1_cdsj.Text = "0";
+            this.txt_1_cdsj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_1_cddl
+            // 
+            this.txt_1_cddl.BackColor = System.Drawing.Color.White;
+            this.txt_1_cddl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_1_cddl.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_1_cddl.Location = new System.Drawing.Point(163, 178);
+            this.txt_1_cddl.Name = "txt_1_cddl";
+            this.txt_1_cddl.ReadOnly = true;
+            this.txt_1_cddl.Size = new System.Drawing.Size(148, 53);
+            this.txt_1_cddl.TabIndex = 50;
+            this.txt_1_cddl.Text = "0";
+            this.txt_1_cddl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_1_dcdy
+            // 
+            this.txt_1_dcdy.BackColor = System.Drawing.Color.White;
+            this.txt_1_dcdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_1_dcdy.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_1_dcdy.Location = new System.Drawing.Point(9, 67);
+            this.txt_1_dcdy.Name = "txt_1_dcdy";
+            this.txt_1_dcdy.ReadOnly = true;
+            this.txt_1_dcdy.Size = new System.Drawing.Size(148, 53);
+            this.txt_1_dcdy.TabIndex = 51;
+            this.txt_1_dcdy.Text = "0";
+            this.txt_1_dcdy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.Location = new System.Drawing.Point(163, 341);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 22);
+            this.label1.TabIndex = 43;
+            this.label1.Text = "（A）";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label2
+            // 
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.Location = new System.Drawing.Point(163, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(148, 22);
+            this.label2.TabIndex = 46;
+            this.label2.Text = "（次）";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label3
+            // 
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.Location = new System.Drawing.Point(9, 453);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(148, 22);
+            this.label3.TabIndex = 45;
+            this.label3.Text = "（Ah）";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.Location = new System.Drawing.Point(163, 230);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(148, 22);
+            this.label4.TabIndex = 44;
+            this.label4.Text = "（A）";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.Location = new System.Drawing.Point(9, 341);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(148, 22);
+            this.label5.TabIndex = 37;
+            this.label5.Text = "（Min）";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.Location = new System.Drawing.Point(163, 45);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(148, 23);
+            this.label6.TabIndex = 35;
+            this.label6.Text = "循环次数";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label7.Location = new System.Drawing.Point(163, 267);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(148, 23);
+            this.label7.TabIndex = 33;
+            this.label7.Text = "放电电流";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label8
+            // 
+            this.label8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label8.Location = new System.Drawing.Point(9, 379);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(148, 23);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "放电安时数";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label9
+            // 
+            this.label9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label9.Location = new System.Drawing.Point(9, 230);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(148, 22);
+            this.label9.TabIndex = 41;
+            this.label9.Text = "（Min）";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label10.Location = new System.Drawing.Point(9, 267);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(148, 23);
+            this.label10.TabIndex = 42;
+            this.label10.Text = "放电时间";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label11
+            // 
+            this.label11.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label11.Location = new System.Drawing.Point(163, 156);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(148, 23);
+            this.label11.TabIndex = 40;
+            this.label11.Text = "充电电流";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label12
+            // 
+            this.label12.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label12.Location = new System.Drawing.Point(9, 156);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(148, 23);
+            this.label12.TabIndex = 38;
+            this.label12.Text = "充电时间";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label13.Location = new System.Drawing.Point(9, 119);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(148, 22);
+            this.label13.TabIndex = 39;
+            this.label13.Text = "（V）";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label14
+            // 
+            this.label14.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label14.Location = new System.Drawing.Point(9, 45);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(148, 23);
+            this.label14.TabIndex = 36;
+            this.label14.Text = "电池电压";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.label15.Location = new System.Drawing.Point(8, 20);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(162, 12);
+            this.label15.TabIndex = 32;
+            this.label15.Text = "请选择1#通道蓄电池型号：";
+            // 
+            // cmb_xdcxh1
+            // 
+            this.cmb_xdcxh1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_xdcxh1.FormattingEnabled = true;
+            this.cmb_xdcxh1.Location = new System.Drawing.Point(175, 15);
+            this.cmb_xdcxh1.Name = "cmb_xdcxh1";
+            this.cmb_xdcxh1.Size = new System.Drawing.Size(121, 20);
+            this.cmb_xdcxh1.TabIndex = 31;
+            this.cmb_xdcxh1.SelectedIndexChanged += new System.EventHandler(this.cmb_xdcxh1_SelectedIndexChanged);
+            // 
+            // lab_1_yxzt
+            // 
+            this.lab_1_yxzt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_1_yxzt.Location = new System.Drawing.Point(9, 486);
+            this.lab_1_yxzt.Name = "lab_1_yxzt";
+            this.lab_1_yxzt.Size = new System.Drawing.Size(148, 70);
+            this.lab_1_yxzt.TabIndex = 30;
+            this.lab_1_yxzt.Text = "运行状态：待机";
+            this.lab_1_yxzt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.btn_1_qrxh);
+            this.groupBox7.Controls.Add(this.btn_1_tingzhi);
+            this.groupBox7.Controls.Add(this.btn_1_fangdian);
+            this.groupBox7.Controls.Add(this.btn_1_chongdian);
+            this.groupBox7.Location = new System.Drawing.Point(6, 582);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(322, 93);
+            this.groupBox7.TabIndex = 149;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "1#通道操作";
+            // 
+            // btn_1_qrxh
+            // 
+            this.btn_1_qrxh.Enabled = false;
+            this.btn_1_qrxh.Location = new System.Drawing.Point(15, 16);
+            this.btn_1_qrxh.Name = "btn_1_qrxh";
+            this.btn_1_qrxh.Size = new System.Drawing.Size(70, 70);
+            this.btn_1_qrxh.TabIndex = 7;
+            this.btn_1_qrxh.Text = "确认型号";
+            this.btn_1_qrxh.UseVisualStyleBackColor = true;
+            this.btn_1_qrxh.Click += new System.EventHandler(this.btn_1_qrxh_Click);
+            // 
+            // btn_1_tingzhi
+            // 
+            this.btn_1_tingzhi.Enabled = false;
+            this.btn_1_tingzhi.Location = new System.Drawing.Point(237, 16);
+            this.btn_1_tingzhi.Name = "btn_1_tingzhi";
+            this.btn_1_tingzhi.Size = new System.Drawing.Size(70, 70);
+            this.btn_1_tingzhi.TabIndex = 6;
+            this.btn_1_tingzhi.Text = "停止";
+            this.btn_1_tingzhi.UseVisualStyleBackColor = true;
+            this.btn_1_tingzhi.Click += new System.EventHandler(this.btn_1_tingzhi_Click);
+            // 
+            // btn_1_fangdian
+            // 
+            this.btn_1_fangdian.Enabled = false;
+            this.btn_1_fangdian.Location = new System.Drawing.Point(163, 16);
+            this.btn_1_fangdian.Name = "btn_1_fangdian";
+            this.btn_1_fangdian.Size = new System.Drawing.Size(70, 70);
+            this.btn_1_fangdian.TabIndex = 5;
+            this.btn_1_fangdian.Text = "放电";
+            this.btn_1_fangdian.UseVisualStyleBackColor = true;
+            this.btn_1_fangdian.Click += new System.EventHandler(this.btn_1_fangdian_Click);
+            // 
+            // btn_1_chongdian
+            // 
+            this.btn_1_chongdian.Enabled = false;
+            this.btn_1_chongdian.Location = new System.Drawing.Point(89, 16);
+            this.btn_1_chongdian.Name = "btn_1_chongdian";
+            this.btn_1_chongdian.Size = new System.Drawing.Size(70, 70);
+            this.btn_1_chongdian.TabIndex = 4;
+            this.btn_1_chongdian.Text = "充电";
+            this.btn_1_chongdian.UseVisualStyleBackColor = true;
+            this.btn_1_chongdian.Click += new System.EventHandler(this.btn_1_chongdian_Click);
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Controls.Add(this.groupBox2);
+            this.tabPage2.Controls.Add(this.groupBox5);
+            this.tabPage2.Controls.Add(this.groupBox8);
+            this.tabPage2.Location = new System.Drawing.Point(4, 21);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(1144, 680);
+            this.tabPage2.TabIndex = 1;
+            this.tabPage2.Text = "2#通道";
+            this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.groupBox11);
+            this.groupBox2.Controls.Add(this.chart2);
+            this.groupBox2.Font = new System.Drawing.Font("宋体", 9F);
+            this.groupBox2.Location = new System.Drawing.Point(337, 6);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(801, 669);
+            this.groupBox2.TabIndex = 150;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "2#通道曲线图";
+            // 
+            // groupBox11
+            // 
+            this.groupBox11.Controls.Add(this.btn_2_save);
+            this.groupBox11.Controls.Add(this.txt_2_shiyankaishishijian);
+            this.groupBox11.Controls.Add(this.label34);
+            this.groupBox11.Controls.Add(this.txt_2_chuchangbianhao);
+            this.groupBox11.Controls.Add(this.txt_2_chehao);
+            this.groupBox11.Controls.Add(this.txt_2_chexing);
+            this.groupBox11.Controls.Add(this.label39);
+            this.groupBox11.Controls.Add(this.label47);
+            this.groupBox11.Controls.Add(this.label60);
+            this.groupBox11.Location = new System.Drawing.Point(6, 576);
+            this.groupBox11.Name = "groupBox11";
+            this.groupBox11.Size = new System.Drawing.Size(789, 89);
+            this.groupBox11.TabIndex = 148;
+            this.groupBox11.TabStop = false;
+            this.groupBox11.Text = "2#试验工况";
+            // 
+            // btn_2_save
+            // 
+            this.btn_2_save.Location = new System.Drawing.Point(659, 32);
+            this.btn_2_save.Name = "btn_2_save";
+            this.btn_2_save.Size = new System.Drawing.Size(100, 38);
+            this.btn_2_save.TabIndex = 161;
+            this.btn_2_save.Text = "保存数据";
+            this.btn_2_save.UseVisualStyleBackColor = true;
+            this.btn_2_save.Click += new System.EventHandler(this.btn_2_save_Click);
+            // 
+            // txt_2_shiyankaishishijian
+            // 
+            this.txt_2_shiyankaishishijian.Location = new System.Drawing.Point(293, 58);
+            this.txt_2_shiyankaishishijian.Name = "txt_2_shiyankaishishijian";
+            this.txt_2_shiyankaishishijian.ReadOnly = true;
+            this.txt_2_shiyankaishishijian.Size = new System.Drawing.Size(100, 21);
+            this.txt_2_shiyankaishishijian.TabIndex = 160;
+            // 
+            // label34
+            // 
+            this.label34.AutoSize = true;
+            this.label34.Location = new System.Drawing.Point(204, 62);
+            this.label34.Name = "label34";
+            this.label34.Size = new System.Drawing.Size(83, 12);
+            this.label34.TabIndex = 159;
+            this.label34.Text = "试验开始时间:";
+            // 
+            // txt_2_chuchangbianhao
+            // 
+            this.txt_2_chuchangbianhao.Location = new System.Drawing.Point(76, 58);
+            this.txt_2_chuchangbianhao.Name = "txt_2_chuchangbianhao";
+            this.txt_2_chuchangbianhao.Size = new System.Drawing.Size(100, 21);
+            this.txt_2_chuchangbianhao.TabIndex = 158;
+            // 
+            // txt_2_chehao
+            // 
+            this.txt_2_chehao.Location = new System.Drawing.Point(293, 20);
+            this.txt_2_chehao.Name = "txt_2_chehao";
+            this.txt_2_chehao.Size = new System.Drawing.Size(100, 21);
+            this.txt_2_chehao.TabIndex = 157;
+            // 
+            // txt_2_chexing
+            // 
+            this.txt_2_chexing.Location = new System.Drawing.Point(75, 20);
+            this.txt_2_chexing.Name = "txt_2_chexing";
+            this.txt_2_chexing.Size = new System.Drawing.Size(100, 21);
+            this.txt_2_chexing.TabIndex = 156;
+            // 
+            // label39
+            // 
+            this.label39.AutoSize = true;
+            this.label39.Location = new System.Drawing.Point(11, 62);
+            this.label39.Name = "label39";
+            this.label39.Size = new System.Drawing.Size(59, 12);
+            this.label39.TabIndex = 155;
+            this.label39.Text = "出厂编号:";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Location = new System.Drawing.Point(252, 24);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(35, 12);
+            this.label47.TabIndex = 154;
+            this.label47.Text = "车号:";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.Location = new System.Drawing.Point(34, 23);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(35, 12);
+            this.label60.TabIndex = 153;
+            this.label60.Text = "车型:";
+            // 
+            // chart2
+            // 
+            chartArea10.AxisX.Interval = 100;
+            chartArea10.AxisX.Maximum = 1000;
+            chartArea10.AxisX.Minimum = 0;
+            chartArea10.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea10.AxisX.Title = "时间(Min)";
+            chartArea10.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea10.AxisY.Interval = 20;
+            chartArea10.AxisY.Maximum = 220;
+            chartArea10.AxisY.Minimum = 0;
+            chartArea10.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Stacked;
+            chartArea10.AxisY.Title = "电压V";
+            chartArea10.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea10.Name = "ChartArea1";
+            chartArea11.AxisX.Interval = 100;
+            chartArea11.AxisX.Maximum = 1000;
+            chartArea11.AxisX.Minimum = 0;
+            chartArea11.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea11.AxisX.Title = "时间(Min)";
+            chartArea11.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea11.AxisY.Maximum = 100;
+            chartArea11.AxisY.Minimum = 0;
+            chartArea11.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Stacked;
+            chartArea11.AxisY.Title = "电流A";
+            chartArea11.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea11.Name = "ChartArea2";
+            chartArea12.AxisX.Interval = 100;
+            chartArea12.AxisX.Maximum = 1000;
+            chartArea12.AxisX.Minimum = 0;
+            chartArea12.AxisX.Title = "时间(Min)";
+            chartArea12.AxisY.Interval = 20;
+            chartArea12.AxisY.Maximum = 80;
+            chartArea12.AxisY.Minimum = 0;
+            chartArea12.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Stacked;
+            chartArea12.AxisY.Title = "安时数Ah";
+            chartArea12.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea12.Name = "ChartArea3";
+            this.chart2.ChartAreas.Add(chartArea10);
+            this.chart2.ChartAreas.Add(chartArea11);
+            this.chart2.ChartAreas.Add(chartArea12);
+            legend4.Name = "Legend1";
+            this.chart2.Legends.Add(legend4);
+            this.chart2.Location = new System.Drawing.Point(3, 17);
+            this.chart2.Name = "chart2";
+            series13.ChartArea = "ChartArea1";
+            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series13.Legend = "Legend1";
+            series13.Name = "电压曲线";
+            series14.ChartArea = "ChartArea2";
+            series14.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series14.Legend = "Legend1";
+            series14.Name = "充电电流曲线";
+            series15.ChartArea = "ChartArea3";
+            series15.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series15.Legend = "Legend1";
+            series15.Name = "安时数曲线";
+            series16.ChartArea = "ChartArea2";
+            series16.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series16.Legend = "Legend1";
+            series16.Name = "放电电流曲线";
+            this.chart2.Series.Add(series13);
+            this.chart2.Series.Add(series14);
+            this.chart2.Series.Add(series15);
+            this.chart2.Series.Add(series16);
+            this.chart2.Size = new System.Drawing.Size(795, 547);
+            this.chart2.TabIndex = 2;
+            this.chart2.Text = "chart2";
+            // 
+            // groupBox5
+            // 
+            this.groupBox5.Controls.Add(this.lab_2_wdgg);
+            this.groupBox5.Controls.Add(this.lab_2_gl);
+            this.groupBox5.Controls.Add(this.lab_2_gy);
+            this.groupBox5.Controls.Add(this.lab_2_scdlgd);
+            this.groupBox5.Controls.Add(this.lab_2_dcjxjf);
+            this.groupBox5.Controls.Add(this.lab_2_xyfdzzdy);
+            this.groupBox5.Controls.Add(this.lab_2_dycdzzdy);
+            this.groupBox5.Controls.Add(this.lab_2_xycdqsdy);
+            this.groupBox5.Controls.Add(this.label70);
+            this.groupBox5.Controls.Add(this.label71);
+            this.groupBox5.Controls.Add(this.label72);
+            this.groupBox5.Controls.Add(this.label73);
+            this.groupBox5.Controls.Add(this.label74);
+            this.groupBox5.Controls.Add(this.label75);
+            this.groupBox5.Controls.Add(this.label76);
+            this.groupBox5.Controls.Add(this.label77);
+            this.groupBox5.Controls.Add(this.txt_2_fdass);
+            this.groupBox5.Controls.Add(this.label78);
+            this.groupBox5.Controls.Add(this.label79);
+            this.groupBox5.Controls.Add(this.lab_2_yxzt);
+            this.groupBox5.Controls.Add(this.txt_2_xhcs);
+            this.groupBox5.Controls.Add(this.txt_2_fdsj);
+            this.groupBox5.Controls.Add(this.txt_2_fddl);
+            this.groupBox5.Controls.Add(this.txt_2_cdsj);
+            this.groupBox5.Controls.Add(this.txt_2_cddl);
+            this.groupBox5.Controls.Add(this.txt_2_dcdy);
+            this.groupBox5.Controls.Add(this.label16);
+            this.groupBox5.Controls.Add(this.label17);
+            this.groupBox5.Controls.Add(this.label19);
+            this.groupBox5.Controls.Add(this.label20);
+            this.groupBox5.Controls.Add(this.label21);
+            this.groupBox5.Controls.Add(this.label22);
+            this.groupBox5.Controls.Add(this.label24);
+            this.groupBox5.Controls.Add(this.label25);
+            this.groupBox5.Controls.Add(this.label26);
+            this.groupBox5.Controls.Add(this.label27);
+            this.groupBox5.Controls.Add(this.label28);
+            this.groupBox5.Controls.Add(this.label29);
+            this.groupBox5.Controls.Add(this.label30);
+            this.groupBox5.Controls.Add(this.cmb_xdcxh2);
+            this.groupBox5.Font = new System.Drawing.Font("宋体", 9F);
+            this.groupBox5.Location = new System.Drawing.Point(6, 6);
+            this.groupBox5.Name = "groupBox5";
+            this.groupBox5.Size = new System.Drawing.Size(322, 564);
+            this.groupBox5.TabIndex = 148;
+            this.groupBox5.TabStop = false;
+            this.groupBox5.Text = "2#通道参数";
+            // 
+            // lab_2_wdgg
+            // 
+            this.lab_2_wdgg.BackColor = System.Drawing.Color.White;
+            this.lab_2_wdgg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_2_wdgg.Location = new System.Drawing.Point(288, 533);
+            this.lab_2_wdgg.Name = "lab_2_wdgg";
+            this.lab_2_wdgg.Size = new System.Drawing.Size(23, 23);
+            this.lab_2_wdgg.TabIndex = 77;
+            this.lab_2_wdgg.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_2_gl
+            // 
+            this.lab_2_gl.BackColor = System.Drawing.Color.White;
+            this.lab_2_gl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_2_gl.Location = new System.Drawing.Point(288, 511);
+            this.lab_2_gl.Name = "lab_2_gl";
+            this.lab_2_gl.Size = new System.Drawing.Size(23, 23);
+            this.lab_2_gl.TabIndex = 78;
+            this.lab_2_gl.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_2_gy
+            // 
+            this.lab_2_gy.BackColor = System.Drawing.Color.White;
+            this.lab_2_gy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_2_gy.Location = new System.Drawing.Point(288, 489);
+            this.lab_2_gy.Name = "lab_2_gy";
+            this.lab_2_gy.Size = new System.Drawing.Size(23, 23);
+            this.lab_2_gy.TabIndex = 75;
+            this.lab_2_gy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_2_scdlgd
+            // 
+            this.lab_2_scdlgd.BackColor = System.Drawing.Color.White;
+            this.lab_2_scdlgd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_2_scdlgd.Location = new System.Drawing.Point(288, 467);
+            this.lab_2_scdlgd.Name = "lab_2_scdlgd";
+            this.lab_2_scdlgd.Size = new System.Drawing.Size(23, 23);
+            this.lab_2_scdlgd.TabIndex = 76;
+            this.lab_2_scdlgd.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_2_dcjxjf
+            // 
+            this.lab_2_dcjxjf.BackColor = System.Drawing.Color.White;
+            this.lab_2_dcjxjf.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_2_dcjxjf.Location = new System.Drawing.Point(288, 445);
+            this.lab_2_dcjxjf.Name = "lab_2_dcjxjf";
+            this.lab_2_dcjxjf.Size = new System.Drawing.Size(23, 23);
+            this.lab_2_dcjxjf.TabIndex = 81;
+            this.lab_2_dcjxjf.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_2_xyfdzzdy
+            // 
+            this.lab_2_xyfdzzdy.BackColor = System.Drawing.Color.White;
+            this.lab_2_xyfdzzdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_2_xyfdzzdy.Location = new System.Drawing.Point(288, 423);
+            this.lab_2_xyfdzzdy.Name = "lab_2_xyfdzzdy";
+            this.lab_2_xyfdzzdy.Size = new System.Drawing.Size(23, 23);
+            this.lab_2_xyfdzzdy.TabIndex = 82;
+            this.lab_2_xyfdzzdy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_2_dycdzzdy
+            // 
+            this.lab_2_dycdzzdy.BackColor = System.Drawing.Color.White;
+            this.lab_2_dycdzzdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_2_dycdzzdy.Location = new System.Drawing.Point(288, 401);
+            this.lab_2_dycdzzdy.Name = "lab_2_dycdzzdy";
+            this.lab_2_dycdzzdy.Size = new System.Drawing.Size(23, 23);
+            this.lab_2_dycdzzdy.TabIndex = 79;
+            this.lab_2_dycdzzdy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // lab_2_xycdqsdy
+            // 
+            this.lab_2_xycdqsdy.BackColor = System.Drawing.Color.White;
+            this.lab_2_xycdqsdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_2_xycdqsdy.Location = new System.Drawing.Point(288, 379);
+            this.lab_2_xycdqsdy.Name = "lab_2_xycdqsdy";
+            this.lab_2_xycdqsdy.Size = new System.Drawing.Size(23, 23);
+            this.lab_2_xycdqsdy.TabIndex = 80;
+            this.lab_2_xycdqsdy.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label70
+            // 
+            this.label70.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label70.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label70.Location = new System.Drawing.Point(163, 533);
+            this.label70.Name = "label70";
+            this.label70.Size = new System.Drawing.Size(119, 23);
+            this.label70.TabIndex = 74;
+            this.label70.Text = "温度过高";
+            this.label70.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label71
+            // 
+            this.label71.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label71.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label71.Location = new System.Drawing.Point(163, 511);
+            this.label71.Name = "label71";
+            this.label71.Size = new System.Drawing.Size(119, 23);
+            this.label71.TabIndex = 73;
+            this.label71.Text = "过流";
+            this.label71.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label72
+            // 
+            this.label72.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label72.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label72.Location = new System.Drawing.Point(163, 489);
+            this.label72.Name = "label72";
+            this.label72.Size = new System.Drawing.Size(119, 23);
+            this.label72.TabIndex = 72;
+            this.label72.Text = "过压";
+            this.label72.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label73
+            // 
+            this.label73.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label73.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label73.Location = new System.Drawing.Point(163, 467);
+            this.label73.Name = "label73";
+            this.label73.Size = new System.Drawing.Size(119, 23);
+            this.label73.TabIndex = 71;
+            this.label73.Text = "输出电流过大";
+            this.label73.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label74
+            // 
+            this.label74.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label74.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label74.Location = new System.Drawing.Point(163, 445);
+            this.label74.Name = "label74";
+            this.label74.Size = new System.Drawing.Size(119, 23);
+            this.label74.TabIndex = 70;
+            this.label74.Text = "电池极性接反";
+            this.label74.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label75
+            // 
+            this.label75.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label75.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label75.Location = new System.Drawing.Point(163, 423);
+            this.label75.Name = "label75";
+            this.label75.Size = new System.Drawing.Size(119, 23);
+            this.label75.TabIndex = 69;
+            this.label75.Text = "小于放电终止电压";
+            this.label75.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label76
+            // 
+            this.label76.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label76.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label76.Location = new System.Drawing.Point(163, 401);
+            this.label76.Name = "label76";
+            this.label76.Size = new System.Drawing.Size(119, 23);
+            this.label76.TabIndex = 68;
+            this.label76.Text = "大于充电终止电压";
+            this.label76.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label77
+            // 
+            this.label77.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.label77.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label77.Location = new System.Drawing.Point(163, 379);
+            this.label77.Name = "label77";
+            this.label77.Size = new System.Drawing.Size(119, 23);
+            this.label77.TabIndex = 67;
+            this.label77.Text = "小于充电起始电压";
+            this.label77.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txt_2_fdass
+            // 
+            this.txt_2_fdass.BackColor = System.Drawing.Color.White;
+            this.txt_2_fdass.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_2_fdass.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_2_fdass.Location = new System.Drawing.Point(9, 401);
+            this.txt_2_fdass.Name = "txt_2_fdass";
+            this.txt_2_fdass.ReadOnly = true;
+            this.txt_2_fdass.Size = new System.Drawing.Size(148, 53);
+            this.txt_2_fdass.TabIndex = 66;
+            this.txt_2_fdass.Text = "0";
+            this.txt_2_fdass.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label78
+            // 
+            this.label78.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label78.Location = new System.Drawing.Point(9, 453);
+            this.label78.Name = "label78";
+            this.label78.Size = new System.Drawing.Size(148, 22);
+            this.label78.TabIndex = 65;
+            this.label78.Text = "（Ah）";
+            this.label78.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label79
+            // 
+            this.label79.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label79.Location = new System.Drawing.Point(9, 379);
+            this.label79.Name = "label79";
+            this.label79.Size = new System.Drawing.Size(148, 23);
+            this.label79.TabIndex = 64;
+            this.label79.Text = "放电安时数";
+            this.label79.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lab_2_yxzt
+            // 
+            this.lab_2_yxzt.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lab_2_yxzt.Location = new System.Drawing.Point(9, 486);
+            this.lab_2_yxzt.Name = "lab_2_yxzt";
+            this.lab_2_yxzt.Size = new System.Drawing.Size(148, 70);
+            this.lab_2_yxzt.TabIndex = 63;
+            this.lab_2_yxzt.Text = "运行状态：待机";
+            this.lab_2_yxzt.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // txt_2_xhcs
+            // 
+            this.txt_2_xhcs.BackColor = System.Drawing.Color.White;
+            this.txt_2_xhcs.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_2_xhcs.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_2_xhcs.Location = new System.Drawing.Point(163, 67);
+            this.txt_2_xhcs.Name = "txt_2_xhcs";
+            this.txt_2_xhcs.ReadOnly = true;
+            this.txt_2_xhcs.Size = new System.Drawing.Size(148, 53);
+            this.txt_2_xhcs.TabIndex = 49;
+            this.txt_2_xhcs.Text = "0";
+            this.txt_2_xhcs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_2_fdsj
+            // 
+            this.txt_2_fdsj.BackColor = System.Drawing.Color.White;
+            this.txt_2_fdsj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_2_fdsj.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_2_fdsj.Location = new System.Drawing.Point(9, 289);
+            this.txt_2_fdsj.Name = "txt_2_fdsj";
+            this.txt_2_fdsj.ReadOnly = true;
+            this.txt_2_fdsj.Size = new System.Drawing.Size(148, 53);
+            this.txt_2_fdsj.TabIndex = 47;
+            this.txt_2_fdsj.Text = "0";
+            this.txt_2_fdsj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_2_fddl
+            // 
+            this.txt_2_fddl.BackColor = System.Drawing.Color.White;
+            this.txt_2_fddl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_2_fddl.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_2_fddl.Location = new System.Drawing.Point(163, 289);
+            this.txt_2_fddl.Name = "txt_2_fddl";
+            this.txt_2_fddl.ReadOnly = true;
+            this.txt_2_fddl.Size = new System.Drawing.Size(148, 53);
+            this.txt_2_fddl.TabIndex = 52;
+            this.txt_2_fddl.Text = "0";
+            this.txt_2_fddl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_2_cdsj
+            // 
+            this.txt_2_cdsj.BackColor = System.Drawing.Color.White;
+            this.txt_2_cdsj.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_2_cdsj.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_2_cdsj.Location = new System.Drawing.Point(9, 178);
+            this.txt_2_cdsj.Name = "txt_2_cdsj";
+            this.txt_2_cdsj.ReadOnly = true;
+            this.txt_2_cdsj.Size = new System.Drawing.Size(148, 53);
+            this.txt_2_cdsj.TabIndex = 53;
+            this.txt_2_cdsj.Text = "0";
+            this.txt_2_cdsj.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_2_cddl
+            // 
+            this.txt_2_cddl.BackColor = System.Drawing.Color.White;
+            this.txt_2_cddl.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_2_cddl.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_2_cddl.Location = new System.Drawing.Point(163, 178);
+            this.txt_2_cddl.Name = "txt_2_cddl";
+            this.txt_2_cddl.ReadOnly = true;
+            this.txt_2_cddl.Size = new System.Drawing.Size(148, 53);
+            this.txt_2_cddl.TabIndex = 50;
+            this.txt_2_cddl.Text = "0";
+            this.txt_2_cddl.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txt_2_dcdy
+            // 
+            this.txt_2_dcdy.BackColor = System.Drawing.Color.White;
+            this.txt_2_dcdy.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txt_2_dcdy.Font = new System.Drawing.Font("宋体", 30F, System.Drawing.FontStyle.Bold);
+            this.txt_2_dcdy.Location = new System.Drawing.Point(9, 67);
+            this.txt_2_dcdy.Name = "txt_2_dcdy";
+            this.txt_2_dcdy.ReadOnly = true;
+            this.txt_2_dcdy.Size = new System.Drawing.Size(148, 53);
+            this.txt_2_dcdy.TabIndex = 51;
+            this.txt_2_dcdy.Text = "0";
+            this.txt_2_dcdy.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label16
+            // 
+            this.label16.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label16.Location = new System.Drawing.Point(163, 341);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(148, 22);
+            this.label16.TabIndex = 43;
+            this.label16.Text = "（A）";
+            this.label16.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label17
+            // 
+            this.label17.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label17.Location = new System.Drawing.Point(163, 119);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(148, 22);
+            this.label17.TabIndex = 46;
+            this.label17.Text = "（次）";
+            this.label17.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label19
+            // 
+            this.label19.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label19.Location = new System.Drawing.Point(163, 230);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(148, 22);
+            this.label19.TabIndex = 44;
+            this.label19.Text = "（A）";
+            this.label19.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label20
+            // 
+            this.label20.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label20.Location = new System.Drawing.Point(9, 341);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(148, 22);
+            this.label20.TabIndex = 37;
+            this.label20.Text = "（Min）";
+            this.label20.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label21
+            // 
+            this.label21.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label21.Location = new System.Drawing.Point(163, 45);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(148, 23);
+            this.label21.TabIndex = 35;
+            this.label21.Text = "循环次数";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label22
+            // 
+            this.label22.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label22.Location = new System.Drawing.Point(163, 267);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(148, 23);
+            this.label22.TabIndex = 33;
+            this.label22.Text = "放电电流";
+            this.label22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label24
+            // 
+            this.label24.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label24.Location = new System.Drawing.Point(9, 230);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(148, 22);
+            this.label24.TabIndex = 41;
+            this.label24.Text = "（Min）";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label25
+            // 
+            this.label25.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label25.Location = new System.Drawing.Point(9, 267);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(148, 23);
+            this.label25.TabIndex = 42;
+            this.label25.Text = "放电时间";
+            this.label25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label26
+            // 
+            this.label26.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label26.Location = new System.Drawing.Point(163, 156);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(148, 23);
+            this.label26.TabIndex = 40;
+            this.label26.Text = "充电电流";
+            this.label26.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label27
+            // 
+            this.label27.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label27.Location = new System.Drawing.Point(9, 156);
+            this.label27.Name = "label27";
+            this.label27.Size = new System.Drawing.Size(148, 23);
+            this.label27.TabIndex = 38;
+            this.label27.Text = "充电时间";
+            this.label27.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label28
+            // 
+            this.label28.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label28.Location = new System.Drawing.Point(9, 119);
+            this.label28.Name = "label28";
+            this.label28.Size = new System.Drawing.Size(148, 22);
+            this.label28.TabIndex = 39;
+            this.label28.Text = "（V）";
+            this.label28.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label29
+            // 
+            this.label29.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label29.Location = new System.Drawing.Point(9, 45);
+            this.label29.Name = "label29";
+            this.label29.Size = new System.Drawing.Size(148, 23);
+            this.label29.TabIndex = 36;
+            this.label29.Text = "电池电压";
+            this.label29.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label30
+            // 
+            this.label30.AutoSize = true;
+            this.label30.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Bold);
+            this.label30.Location = new System.Drawing.Point(8, 20);
+            this.label30.Name = "label30";
+            this.label30.Size = new System.Drawing.Size(162, 12);
+            this.label30.TabIndex = 32;
+            this.label30.Text = "请选择2#通道蓄电池型号：";
+            // 
+            // cmb_xdcxh2
+            // 
+            this.cmb_xdcxh2.FormattingEnabled = true;
+            this.cmb_xdcxh2.Location = new System.Drawing.Point(175, 15);
+            this.cmb_xdcxh2.Name = "cmb_xdcxh2";
+            this.cmb_xdcxh2.Size = new System.Drawing.Size(121, 20);
+            this.cmb_xdcxh2.TabIndex = 31;
+            this.cmb_xdcxh2.SelectedIndexChanged += new System.EventHandler(this.cmb_xdcxh2_SelectedIndexChanged);
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.btn_2_qrxh);
+            this.groupBox8.Controls.Add(this.btn_2_tingzhi);
+            this.groupBox8.Controls.Add(this.btn_2_fangdian);
+            this.groupBox8.Controls.Add(this.btn_2_chongdian);
+            this.groupBox8.Location = new System.Drawing.Point(6, 582);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(322, 93);
+            this.groupBox8.TabIndex = 149;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "2#通道操作";
+            // 
+            // btn_2_qrxh
+            // 
+            this.btn_2_qrxh.Location = new System.Drawing.Point(15, 16);
+            this.btn_2_qrxh.Name = "btn_2_qrxh";
+            this.btn_2_qrxh.Size = new System.Drawing.Size(70, 70);
+            this.btn_2_qrxh.TabIndex = 7;
+            this.btn_2_qrxh.Text = "确认型号";
+            this.btn_2_qrxh.UseVisualStyleBackColor = true;
+            this.btn_2_qrxh.Click += new System.EventHandler(this.btn_2_qrxh_Click);
+            // 
+            // btn_2_tingzhi
+            // 
+            this.btn_2_tingzhi.Location = new System.Drawing.Point(237, 16);
+            this.btn_2_tingzhi.Name = "btn_2_tingzhi";
+            this.btn_2_tingzhi.Size = new System.Drawing.Size(70, 70);
+            this.btn_2_tingzhi.TabIndex = 6;
+            this.btn_2_tingzhi.Text = "停止";
+            this.btn_2_tingzhi.UseVisualStyleBackColor = true;
+            this.btn_2_tingzhi.Click += new System.EventHandler(this.btn_2_tingzhi_Click);
+            // 
+            // btn_2_fangdian
+            // 
+            this.btn_2_fangdian.Location = new System.Drawing.Point(163, 16);
+            this.btn_2_fangdian.Name = "btn_2_fangdian";
+            this.btn_2_fangdian.Size = new System.Drawing.Size(70, 70);
+            this.btn_2_fangdian.TabIndex = 5;
+            this.btn_2_fangdian.Text = "放电";
+            this.btn_2_fangdian.UseVisualStyleBackColor = true;
+            this.btn_2_fangdian.Click += new System.EventHandler(this.btn_2_fangdian_Click);
+            // 
+            // btn_2_chongdian
+            // 
+            this.btn_2_chongdian.Location = new System.Drawing.Point(89, 16);
+            this.btn_2_chongdian.Name = "btn_2_chongdian";
+            this.btn_2_chongdian.Size = new System.Drawing.Size(70, 70);
+            this.btn_2_chongdian.TabIndex = 4;
+            this.btn_2_chongdian.Text = "充电";
+            this.btn_2_chongdian.UseVisualStyleBackColor = true;
+            this.btn_2_chongdian.Click += new System.EventHandler(this.btn_2_chongdian_Click);
+            // 
+            // tabPage3
+            // 
+            this.tabPage3.Controls.Add(this.groupBox9);
+            this.tabPage3.Controls.Add(this.groupBox3);
+            this.tabPage3.Controls.Add(this.groupBox6);
+            this.tabPage3.Location = new System.Drawing.Point(4, 21);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage3.Size = new System.Drawing.Size(1144, 680);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "3#通道";
+            this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // groupBox9
+            // 
+            this.groupBox9.Controls.Add(this.groupBox10);
+            this.groupBox9.Controls.Add(this.chart3);
+            this.groupBox9.Font = new System.Drawing.Font("宋体", 9F);
+            this.groupBox9.Location = new System.Drawing.Point(337, 6);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(801, 669);
+            this.groupBox9.TabIndex = 147;
+            this.groupBox9.TabStop = false;
+            this.groupBox9.Text = "3#通道曲线图";
+            // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.btn_3_save);
+            this.groupBox10.Controls.Add(this.txt_3_shiyankaishishijian);
+            this.groupBox10.Controls.Add(this.label18);
+            this.groupBox10.Controls.Add(this.txt_3_chuchangbianhao);
+            this.groupBox10.Controls.Add(this.txt_3_chehao);
+            this.groupBox10.Controls.Add(this.txt_3_chexing);
+            this.groupBox10.Controls.Add(this.label23);
+            this.groupBox10.Controls.Add(this.label31);
+            this.groupBox10.Controls.Add(this.label61);
+            this.groupBox10.Location = new System.Drawing.Point(6, 576);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(789, 89);
+            this.groupBox10.TabIndex = 147;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "3#试验工况";
+            // 
+            // btn_3_save
+            // 
+            this.btn_3_save.Location = new System.Drawing.Point(665, 32);
+            this.btn_3_save.Name = "btn_3_save";
+            this.btn_3_save.Size = new System.Drawing.Size(100, 38);
+            this.btn_3_save.TabIndex = 169;
+            this.btn_3_save.Text = "保存数据";
+            this.btn_3_save.UseVisualStyleBackColor = true;
+            this.btn_3_save.Click += new System.EventHandler(this.btn_3_save_Click);
+            // 
+            // txt_3_shiyankaishishijian
+            // 
+            this.txt_3_shiyankaishishijian.Location = new System.Drawing.Point(296, 58);
+            this.txt_3_shiyankaishishijian.Name = "txt_3_shiyankaishishijian";
+            this.txt_3_shiyankaishishijian.ReadOnly = true;
+            this.txt_3_shiyankaishishijian.Size = new System.Drawing.Size(100, 21);
+            this.txt_3_shiyankaishishijian.TabIndex = 168;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(207, 62);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(83, 12);
+            this.label18.TabIndex = 167;
+            this.label18.Text = "试验开始时间:";
+            // 
+            // txt_3_chuchangbianhao
+            // 
+            this.txt_3_chuchangbianhao.Location = new System.Drawing.Point(79, 58);
+            this.txt_3_chuchangbianhao.Name = "txt_3_chuchangbianhao";
+            this.txt_3_chuchangbianhao.Size = new System.Drawing.Size(100, 21);
+            this.txt_3_chuchangbianhao.TabIndex = 166;
+            // 
+            // txt_3_chehao
+            // 
+            this.txt_3_chehao.Location = new System.Drawing.Point(296, 20);
+            this.txt_3_chehao.Name = "txt_3_chehao";
+            this.txt_3_chehao.Size = new System.Drawing.Size(100, 21);
+            this.txt_3_chehao.TabIndex = 165;
+            // 
+            // txt_3_chexing
+            // 
+            this.txt_3_chexing.Location = new System.Drawing.Point(77, 20);
+            this.txt_3_chexing.Name = "txt_3_chexing";
+            this.txt_3_chexing.Size = new System.Drawing.Size(100, 21);
+            this.txt_3_chexing.TabIndex = 164;
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Location = new System.Drawing.Point(14, 62);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(59, 12);
+            this.label23.TabIndex = 163;
+            this.label23.Text = "出厂编号:";
+            // 
+            // label31
+            // 
+            this.label31.AutoSize = true;
+            this.label31.Location = new System.Drawing.Point(255, 24);
+            this.label31.Name = "label31";
+            this.label31.Size = new System.Drawing.Size(35, 12);
+            this.label31.TabIndex = 162;
+            this.label31.Text = "车号:";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.Location = new System.Drawing.Point(36, 23);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(35, 12);
+            this.label61.TabIndex = 161;
+            this.label61.Text = "车型:";
+            // 
+            // chart3
+            // 
+            chartArea16.AxisX.Interval = 100;
+            chartArea16.AxisX.Maximum = 1000;
+            chartArea16.AxisX.Minimum = 0;
+            chartArea16.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea16.AxisX.Title = "时间(Min)";
+            chartArea16.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea16.AxisY.Interval = 20;
+            chartArea16.AxisY.Maximum = 220;
+            chartArea16.AxisY.Minimum = 0;
+            chartArea16.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Stacked;
+            chartArea16.AxisY.Title = "电压V";
+            chartArea16.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea16.Name = "ChartArea1";
+            chartArea17.AxisX.Interval = 100;
+            chartArea17.AxisX.Maximum = 1000;
+            chartArea17.AxisX.Minimum = 0;
+            chartArea17.AxisX.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Horizontal;
+            chartArea17.AxisX.Title = "时间(Min)";
+            chartArea17.AxisX.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea17.AxisY.Maximum = 100;
+            chartArea17.AxisY.Minimum = 0;
+            chartArea17.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Stacked;
+            chartArea17.AxisY.Title = "电流A";
+            chartArea17.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea17.Name = "ChartArea2";
+            chartArea18.AxisX.Interval = 100;
+            chartArea18.AxisX.Maximum = 1000;
+            chartArea18.AxisX.Minimum = 0;
+            chartArea18.AxisX.Title = "时间(Min)";
+            chartArea18.AxisY.Interval = 20;
+            chartArea18.AxisY.Maximum = 80;
+            chartArea18.AxisY.Minimum = 0;
+            chartArea18.AxisY.TextOrientation = System.Windows.Forms.DataVisualization.Charting.TextOrientation.Stacked;
+            chartArea18.AxisY.Title = "安时数Ah";
+            chartArea18.AxisY.TitleAlignment = System.Drawing.StringAlignment.Far;
+            chartArea18.Name = "ChartArea3";
+            this.chart3.ChartAreas.Add(chartArea16);
+            this.chart3.ChartAreas.Add(chartArea17);
+            this.chart3.ChartAreas.Add(chartArea18);
+            legend6.Name = "Legend1";
+            this.chart3.Legends.Add(legend6);
+            this.chart3.Location = new System.Drawing.Point(3, 17);
+            this.chart3.Name = "chart3";
+            series21.ChartArea = "ChartArea1";
+            series21.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series21.Legend = "Legend1";
+            series21.Name = "电压曲线";
+            series22.ChartArea = "ChartArea2";
+            series22.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series22.Legend = "Legend1";
+            series22.Name = "充电电流曲线";
+            series23.ChartArea = "ChartArea3";
+            series23.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series23.Legend = "Legend1";
+            series23.Name = "安时数曲线";
+            series24.ChartArea = "ChartArea2";
+            series24.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series24.Legend = "Legend1";
+            series24.Name = "放电电流曲线";
+            this.chart3.Series.Add(series21);
+            this.chart3.Series.Add(series22);
+            this.chart3.Series.Add(series23);
+            this.chart3.Series.Add(series24);
+            this.chart3.Size = new System.Drawing.Size(795, 547);
+            this.chart3.TabIndex = 2;
+            this.chart3.Text = "chart3";
+            // 
+            // btn_quit
+            // 
+            this.btn_quit.Location = new System.Drawing.Point(1161, 756);
+            this.btn_quit.Name = "btn_quit";
+            this.btn_quit.Size = new System.Drawing.Size(96, 38);
+            this.btn_quit.TabIndex = 149;
+            this.btn_quit.Text = "退    出";
+            this.btn_quit.UseVisualStyleBackColor = true;
+            this.btn_quit.Click += new System.EventHandler(this.btn_quit_Click);
+            // 
+            // timer_1
+            // 
+            this.timer_1.Enabled = true;
+            this.timer_1.Tick += new System.EventHandler(this.timer_1_Tick);
+            // 
+            // timer_2
+            // 
+            this.timer_2.Tick += new System.EventHandler(this.timer_2_Tick);
+            // 
+            // timer_3
+            // 
+            this.timer_3.Tick += new System.EventHandler(this.timer_3_Tick);
+            // 
+            // timer_chart1
+            // 
+            this.timer_chart1.Tick += new System.EventHandler(this.timer_chart1_Tick);
+            // 
+            // timer_chart2
+            // 
+            this.timer_chart2.Tick += new System.EventHandler(this.timer_chart2_Tick);
+            // 
+            // timer_chart3
+            // 
+            this.timer_chart3.Tick += new System.EventHandler(this.timer_chart3_Tick);
+            // 
+            // UC_MainTest
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.btn_quit);
+            this.Controls.Add(this.tabControl1);
+            this.Controls.Add(this.labTitle);
+            this.Controls.Add(this.pictureBox3);
+            this.Name = "UC_MainTest";
+            this.Size = new System.Drawing.Size(1271, 800);
+            this.Tag = "蓄电池充放电系统";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.tabControl1.ResumeLayout(false);
+            this.tabPage1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox12.ResumeLayout(false);
+            this.groupBox12.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            this.groupBox4.ResumeLayout(false);
+            this.groupBox4.PerformLayout();
+            this.groupBox7.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox11.ResumeLayout(false);
+            this.groupBox11.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
+            this.groupBox5.ResumeLayout(false);
+            this.groupBox5.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.tabPage3.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label labTitle;
+        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.TabControl tabControl1;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Button btn_1_save;
+        private System.Windows.Forms.Button btn_quit;
+        private System.Windows.Forms.TextBox txt_3_xhcs;
+        private System.Windows.Forms.TextBox txt_3_fdsj;
+        private System.Windows.Forms.TextBox txt_3_fddl;
+        private System.Windows.Forms.TextBox txt_3_cdsj;
+        private System.Windows.Forms.TextBox txt_3_cddl;
+        private System.Windows.Forms.TextBox txt_3_dcdy;
+        private System.Windows.Forms.Label label32;
+        private System.Windows.Forms.Label label33;
+        private System.Windows.Forms.Label label35;
+        private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.Label label37;
+        private System.Windows.Forms.Label label38;
+        private System.Windows.Forms.Label label40;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.ComboBox cmb_xdcxh3;
+        private System.Windows.Forms.Button btn_3_qrxh;
+        private System.Windows.Forms.Button btn_3_tingzhi;
+        private System.Windows.Forms.Button btn_3_fangdian;
+        private System.Windows.Forms.Button btn_3_chongdian;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.GroupBox groupBox4;
+        private System.Windows.Forms.TextBox txt_1_xhcs;
+        private System.Windows.Forms.TextBox txt_1_fdass;
+        private System.Windows.Forms.TextBox txt_1_fdsj;
+        private System.Windows.Forms.TextBox txt_1_fddl;
+        private System.Windows.Forms.TextBox txt_1_cdsj;
+        private System.Windows.Forms.TextBox txt_1_cddl;
+        private System.Windows.Forms.TextBox txt_1_dcdy;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.ComboBox cmb_xdcxh1;
+        private System.Windows.Forms.Label lab_1_yxzt;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.Button btn_1_qrxh;
+        private System.Windows.Forms.Button btn_1_tingzhi;
+        private System.Windows.Forms.Button btn_1_fangdian;
+        private System.Windows.Forms.Button btn_1_chongdian;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.GroupBox groupBox5;
+        private System.Windows.Forms.TextBox txt_2_xhcs;
+        private System.Windows.Forms.TextBox txt_2_fdsj;
+        private System.Windows.Forms.TextBox txt_2_fddl;
+        private System.Windows.Forms.TextBox txt_2_cdsj;
+        private System.Windows.Forms.TextBox txt_2_cddl;
+        private System.Windows.Forms.TextBox txt_2_dcdy;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label26;
+        private System.Windows.Forms.Label label27;
+        private System.Windows.Forms.Label label28;
+        private System.Windows.Forms.Label label29;
+        private System.Windows.Forms.Label label30;
+        private System.Windows.Forms.ComboBox cmb_xdcxh2;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.Button btn_2_qrxh;
+        private System.Windows.Forms.Button btn_2_tingzhi;
+        private System.Windows.Forms.Button btn_2_fangdian;
+        private System.Windows.Forms.Button btn_2_chongdian;
+        private System.IO.Ports.SerialPort SP_Omron;
+        private System.Windows.Forms.Timer timer_1;
+        private System.Windows.Forms.Timer timer_2;
+        private System.Windows.Forms.Timer timer_3;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label lab_1_wdgg;
+        private System.Windows.Forms.Label lab_1_gl;
+        private System.Windows.Forms.Label lab_1_gy;
+        private System.Windows.Forms.Label lab_1_scdlgd;
+        private System.Windows.Forms.Label lbl_1_dcjxjf;
+        private System.Windows.Forms.Label lab_1_xyfdzzdy;
+        private System.Windows.Forms.Label lab_1_dycdzzdy;
+        private System.Windows.Forms.Label lab_1_xycdqsdy;
+        private System.Windows.Forms.Label lab_2_wdgg;
+        private System.Windows.Forms.Label lab_2_gl;
+        private System.Windows.Forms.Label lab_2_gy;
+        private System.Windows.Forms.Label lab_2_scdlgd;
+        private System.Windows.Forms.Label lab_2_dcjxjf;
+        private System.Windows.Forms.Label lab_2_xyfdzzdy;
+        private System.Windows.Forms.Label lab_2_dycdzzdy;
+        private System.Windows.Forms.Label lab_2_xycdqsdy;
+        private System.Windows.Forms.Label label70;
+        private System.Windows.Forms.Label label71;
+        private System.Windows.Forms.Label label72;
+        private System.Windows.Forms.Label label73;
+        private System.Windows.Forms.Label label74;
+        private System.Windows.Forms.Label label75;
+        private System.Windows.Forms.Label label76;
+        private System.Windows.Forms.Label label77;
+        private System.Windows.Forms.TextBox txt_2_fdass;
+        private System.Windows.Forms.Label label78;
+        private System.Windows.Forms.Label label79;
+        private System.Windows.Forms.Label lab_2_yxzt;
+        private System.Windows.Forms.Label lab_3_wdgg;
+        private System.Windows.Forms.Label lab_3_gl;
+        private System.Windows.Forms.Label lab_3_gy;
+        private System.Windows.Forms.Label lab_3_scdlgd;
+        private System.Windows.Forms.Label lab_3_dcjxjf;
+        private System.Windows.Forms.Label lab_3_xyfdzzdy;
+        private System.Windows.Forms.Label lab_3_dycdzzdy;
+        private System.Windows.Forms.Label lab_3_xycdqsdy;
+        private System.Windows.Forms.Label label86;
+        private System.Windows.Forms.Label label87;
+        private System.Windows.Forms.Label label88;
+        private System.Windows.Forms.Label label89;
+        private System.Windows.Forms.Label label90;
+        private System.Windows.Forms.Label label91;
+        private System.Windows.Forms.Label label92;
+        private System.Windows.Forms.Label label93;
+        private System.Windows.Forms.TextBox txt_3_fdass;
+        private System.Windows.Forms.Label label94;
+        private System.Windows.Forms.Label label95;
+        private System.Windows.Forms.Label lab_3_yxzt;
+        private System.Windows.Forms.Timer timer_chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart2;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart3;
+        private System.Windows.Forms.Timer timer_chart2;
+        private System.Windows.Forms.Timer timer_chart3;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.GroupBox groupBox11;
+        private System.Windows.Forms.GroupBox groupBox12;
+        private System.Windows.Forms.TextBox txt_1_chuchangbianhao;
+        private System.Windows.Forms.TextBox txt_1_chehao;
+        private System.Windows.Forms.TextBox txt_1_chexing;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.TextBox txt_1_shiyankaishishijian;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.TextBox txt_2_shiyankaishishijian;
+        private System.Windows.Forms.Label label34;
+        private System.Windows.Forms.TextBox txt_2_chuchangbianhao;
+        private System.Windows.Forms.TextBox txt_2_chehao;
+        private System.Windows.Forms.TextBox txt_2_chexing;
+        private System.Windows.Forms.Label label39;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.TextBox txt_3_shiyankaishishijian;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.TextBox txt_3_chuchangbianhao;
+        private System.Windows.Forms.TextBox txt_3_chehao;
+        private System.Windows.Forms.TextBox txt_3_chexing;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label31;
+        private System.Windows.Forms.Label label61;
+        private System.Windows.Forms.Button btn_2_save;
+        private System.Windows.Forms.Button btn_3_save;
+    }
+}

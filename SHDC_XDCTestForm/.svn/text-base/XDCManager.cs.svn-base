@@ -1,0 +1,1592 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using TestSystem.Command.PLC.Omron.HostLink.Fins;
+using System.IO.Ports;
+using TestSystem.Command.ControlCenter;
+
+namespace SHDC_XDCTestForm
+{
+    public class XDCManager
+    {
+
+        private OmronCommandData[] commandData;
+        private IComControl Com = null;
+        private SerialPort sp;
+
+        public XDCManager(ref SerialPort sp)
+        {
+            this.sp = sp;
+            if (!this.sp.IsOpen)
+            {
+                try
+                {
+                    Omron_Port.getInstance().OpenPort(this.sp, "COM1", StopBits.Two, Parity.Even, 9600, 7);
+                }
+                catch
+                {
+                }
+
+            }
+          
+        }
+
+
+        public void LoadData()
+        {
+            Com = ComControl_Factory.getInstance().CreateComControl(ref sp);
+            commandData = new OmronCommandData[256];
+
+            #region 1#通道PLC参数定义
+            commandData[0] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 101
+            };//D101 充电电流设置
+            Com.SetCommand("1#充电电流设置", new Omron_WriteData(commandData[0]));
+
+            commandData[1] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 102
+            };//D102 充电时间设置
+            Com.SetCommand("1#充电时间设置", new Omron_WriteData(commandData[1]));
+
+            commandData[2] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 103
+            };//D103 循环次数设置
+            Com.SetCommand("1#循环次数设置", new Omron_WriteData(commandData[2]));
+
+            commandData[3] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 104
+            };//D104 放电电流设置
+            Com.SetCommand("1#放电电流设置", new Omron_WriteData(commandData[3]));
+
+            commandData[4] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 105
+            };//D105 放电时间设置
+            Com.SetCommand("1#放电时间设置", new Omron_WriteData(commandData[4]));
+
+            commandData[5] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 108
+            };//D108 起始电压设置
+            Com.SetCommand("1#起始电压设置", new Omron_WriteData(commandData[5]));
+
+            commandData[6] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 109
+            };//D109 充电终止电压设置
+            Com.SetCommand("1#充电终止电压设置", new Omron_WriteData(commandData[6]));
+
+            commandData[7] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 120
+            };//D120 放电终止电压设置
+            Com.SetCommand("1#放电终止电压设置", new Omron_WriteData(commandData[7]));
+
+            commandData[8] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 118
+            };//D118 显示充电电流
+            Com.SetReader("1#显示充电电流", new Omron_Reader(commandData[8]));
+
+            commandData[9] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 119
+            };//D119 显示放电电流
+            Com.SetReader("1#显示放电电流", new Omron_Reader(commandData[9]));
+
+            commandData[10] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 138
+            };//D138 显示电池电压
+            Com.SetReader("1#显示电池电压", new Omron_Reader(commandData[10]));
+
+
+            commandData[11] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 400
+            };//D400 显示充电时间
+            Com.SetReader("1#显示充电时间", new Omron_Reader(commandData[11]));
+
+
+            commandData[12] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 401
+            };//D401 显示循环次数
+            Com.SetReader("1#显示循环次数", new Omron_Reader(commandData[12]));
+
+
+            commandData[13] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 402
+            };//D402 显示放电时间
+            Com.SetReader("1#显示放电时间", new Omron_Reader(commandData[13]));
+
+            commandData[14] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 145
+            };//D145 显示放电安时数
+
+            Com.SetReader("1#显示放电安时数", new Omron_Reader(commandData[14]));
+
+
+            commandData[15] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 153
+            };//D153 显示运行状态 0.待机 1.正在充电 2.正在放电 3.故障 4.充电完成 5.放电完成 7.停止 8.程序自动完成
+            Com.SetReader("1#显示运行状态", new Omron_Reader(commandData[15]));
+
+            commandData[16] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "271.04"
+            };//W271.04 小于充电起始电压
+            Com.SetReader("1#小于充电起始电压", new Omron_ReaderStatus(commandData[16]));
+
+            commandData[17] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "271.05"
+            };//W271.05 大于充电起始电压
+            Com.SetReader("1#大于充电终止电压", new Omron_ReaderStatus(commandData[17]));
+
+
+            commandData[18] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "271.06"
+            };//W271.06 小于放电终止电压
+            Com.SetReader("1#小于放电终止电压", new Omron_ReaderStatus(commandData[18]));
+
+            commandData[19] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "271.07"
+            };//W271.07 电池极性接反
+            Com.SetReader("1#电池极性接反", new Omron_ReaderStatus(commandData[19]));
+
+            commandData[20] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "272.01"
+            };//W272.01 过流
+            Com.SetReader("1#过流", new Omron_ReaderStatus(commandData[20]));
+
+            commandData[21] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "272.02"
+            };//W272.02 输出电流过大
+            Com.SetReader("1#输出电流过大", new Omron_ReaderStatus(commandData[21]));
+
+
+            commandData[22] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "272.04"
+            };//W272.04 过压
+            Com.SetReader("1#过压", new Omron_ReaderStatus(commandData[22]));
+
+
+            commandData[23] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "272.06"
+            };//W272.06 温度过高 
+            Com.SetReader("1#温度过高", new Omron_ReaderStatus(commandData[23]));
+
+
+            commandData[24] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "51.00"
+            };//51.00充电操作
+            Com.SetCommand("1#充电操作", new Omron_ClickDown(commandData[24]));
+
+            commandData[25] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "51.01"
+            };//51.01 放电操作
+            Com.SetCommand("1#放电操作", new Omron_ClickDown(commandData[25]));
+
+            commandData[26] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "51.02"
+            };//51.02 停止操作
+            Com.SetCommand("1#停止操作", new Omron_ClickDown(commandData[26]));
+            #endregion
+
+            #region 2#通道PLC参数定义
+            commandData[27] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 201
+            };//D201 充电电流设置
+            Com.SetCommand("2#充电电流设置", new Omron_WriteData(commandData[27]));
+
+            commandData[28] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 202
+            };//D202 充电时间设置
+            Com.SetCommand("2#充电时间设置", new Omron_WriteData(commandData[28]));
+
+
+            commandData[29] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 203
+            };//D203 循环次数设置
+            Com.SetCommand("2#循环次数设置", new Omron_WriteData(commandData[29]));
+
+
+            commandData[30] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 204
+            };//D204 放电电流设置
+            Com.SetCommand("2#放电电流设置", new Omron_WriteData(commandData[30]));
+
+            commandData[31] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 205
+            };//D205 放电时间设置
+            Com.SetCommand("2#放电时间设置", new Omron_WriteData(commandData[31]));
+
+            commandData[32] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 208
+            };//D208 起始电压设置
+            Com.SetCommand("2#起始电压设置", new Omron_WriteData(commandData[32]));
+
+            commandData[33] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 209
+            };//D209 充电终止电压设置
+            Com.SetCommand("2#充电终止电压设置", new Omron_WriteData(commandData[33]));
+
+            commandData[34] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 220
+            };//D220 放电终止电压设置
+            Com.SetCommand("2#放电终止电压设置", new Omron_WriteData(commandData[34]));
+
+
+            commandData[35] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 218
+            };//D218 显示充电电流
+            Com.SetReader("2#显示充电电流", new Omron_Reader(commandData[35]));
+
+            commandData[36] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 219
+            };//D219 显示放电电流
+            Com.SetReader("2#显示放电电流", new Omron_Reader(commandData[36]));
+
+            commandData[37] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 238
+            };//D238 显示电池电压
+            Com.SetReader("2#显示电池电压", new Omron_Reader(commandData[37]));
+
+            commandData[38] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 403
+            };//D403 显示充电时间
+            Com.SetReader("2#显示充电时间", new Omron_Reader(commandData[38]));
+
+
+            commandData[39] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 404
+            };//D404 显示循环次数
+            Com.SetReader("2#显示循环次数", new Omron_Reader(commandData[39]));
+
+
+            commandData[40] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 405
+            };//D405 显示放电时间
+            Com.SetReader("2#显示放电时间", new Omron_Reader(commandData[40]));
+
+            commandData[41] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 245
+            };//D245 显示放电安时数
+            Com.SetReader("2#显示放电安时数", new Omron_Reader(commandData[41]));
+
+
+            commandData[42] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 253
+            };//D253 显示运行状态 0.待机 1.正在充电 2.正在放电 3.故障 4.充电完成 5.放电完成 7.停止 8.程序自动完成
+            Com.SetReader("2#显示运行状态", new Omron_Reader(commandData[42]));
+
+            commandData[43] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "371.04"
+            };//W371.04 小于充电起始电压
+            Com.SetReader("2#小于充电起始电压", new Omron_ReaderStatus(commandData[43]));
+
+            commandData[44] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "371.05"
+            };//W371.05 大于充电终止电压
+            Com.SetReader("2#大于充电终止电压", new Omron_ReaderStatus(commandData[44]));
+
+            commandData[45] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "371.06"
+            };//W371.06 小于放电终止电压
+            Com.SetReader("2#小于放电终止电压", new Omron_ReaderStatus(commandData[45]));
+
+            commandData[46] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "371.07"
+            };//W371.07 电池极性接反
+            Com.SetReader("2#电池极性接反", new Omron_ReaderStatus(commandData[46]));
+
+
+            commandData[47] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "372.01"
+            };//W372.01 过流
+            Com.SetReader("2#过流", new Omron_ReaderStatus(commandData[47]));
+
+
+
+            commandData[48] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "372.02"
+            };//W372.02 输出电流过大
+            Com.SetReader("2#输出电流过大", new Omron_ReaderStatus(commandData[48]));
+
+            commandData[49] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "372.04"
+            };//W372.04 过压
+            Com.SetReader("2#过压", new Omron_ReaderStatus(commandData[49]));
+
+            commandData[50] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "372.06"
+            };//W372.06 温度过高 
+            Com.SetReader("2#温度过高", new Omron_ReaderStatus(commandData[50]));
+
+            commandData[51] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "52.00"
+            };//52.00充电操作
+            Com.SetCommand("2#充电操作", new Omron_ClickDown(commandData[51]));
+
+            commandData[52] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "52.01"
+            };//52.01 放电操作
+            Com.SetCommand("2#放电操作", new Omron_ClickDown(commandData[52]));
+
+            commandData[53] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "52.02"
+            };//52.02 停止操作
+            Com.SetCommand("2#停止操作", new Omron_ClickDown(commandData[53]));
+
+            #endregion
+
+            #region 3#通道PLC参数定义
+            commandData[54] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 301
+            };//D301 充电电流设置
+            Com.SetCommand("3#充电电流设置", new Omron_WriteData(commandData[54]));
+
+            commandData[55] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 302
+            };//D302 充电时间设置
+            Com.SetCommand("3#充电时间设置", new Omron_WriteData(commandData[55]));
+
+            commandData[56] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 303
+            };//D303 循环次数设置
+            Com.SetCommand("3#循环次数设置", new Omron_WriteData(commandData[56]));
+
+            commandData[57] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 304
+            };//D304 放电电流设置
+            Com.SetCommand("3#放电电流设置", new Omron_WriteData(commandData[57]));
+
+
+            commandData[58] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 305
+            };//D305 放电时间设置
+            Com.SetCommand("3#放电时间设置", new Omron_WriteData(commandData[58]));
+
+
+            commandData[59] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 308
+            };//D308 起始电压设置
+            Com.SetCommand("3#起始电压设置", new Omron_WriteData(commandData[59]));
+
+
+            commandData[60] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 309
+            };//D309 充电终止电压设置
+            Com.SetCommand("3#充电终止电压设置", new Omron_WriteData(commandData[60]));
+
+
+            commandData[61] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 320
+            };//D320 放电终止电压设置
+            Com.SetCommand("3#放电终止电压设置", new Omron_WriteData(commandData[61]));
+
+
+            commandData[62] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 318
+            };//D318 显示充电电流
+            Com.SetReader("3#显示充电电流", new Omron_Reader(commandData[62]));
+
+            commandData[63] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 319
+            };//D319 显示放电电流
+            Com.SetReader("3#显示放电电流", new Omron_Reader(commandData[63]));
+
+            commandData[64] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 338
+            };//D338 显示电池电压
+            Com.SetReader("3#显示电池电压", new Omron_Reader(commandData[64]));
+
+
+            commandData[65] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 406
+            };//D406 显示充电时间
+            Com.SetReader("3#显示充电时间", new Omron_Reader(commandData[65]));
+
+
+            commandData[66] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 407
+            };//D407 显示循环次数
+            Com.SetReader("3#显示循环次数", new Omron_Reader(commandData[66]));
+
+            commandData[67] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 408
+            };//D408 显示放电时间
+            Com.SetReader("3#显示放电时间", new Omron_Reader(commandData[67]));
+
+            commandData[68] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 345
+            };//D245 显示放电安时数
+            Com.SetReader("3#显示放电安时数", new Omron_Reader(commandData[68]));
+
+
+            commandData[69] = new OmronCommandData()
+            {
+                AC = AreaCode.DM_Word,
+                DType = DataType.Word,
+                IntAddress = 353
+            };//D253 显示运行状态 0.待机 1.正在充电 2.正在放电 3.故障 4.充电完成 5.放电完成 7.停止 8.程序自动完成
+            Com.SetReader("3#显示运行状态", new Omron_Reader(commandData[69]));
+
+            commandData[70] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "471.04"
+            };//W471.04 小于充电起始电压
+            Com.SetReader("3#小于充电起始电压", new Omron_Reader(commandData[70]));
+
+            commandData[71] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "471.05"
+            };//W471.05 大于充电终止电压
+            Com.SetReader("3#大于充电终止电压", new Omron_Reader(commandData[71]));
+
+            commandData[72] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "471.06"
+            };//W471.06 小于放电终止电压
+            Com.SetReader("3#小于放电终止电压", new Omron_Reader(commandData[72]));
+
+
+            commandData[73] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "471.07"
+            };//W471.07 电池极性接反
+            Com.SetReader("3#电池极性接反", new Omron_Reader(commandData[73]));
+
+            commandData[74] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "472.01"
+            };//W472.01 过流
+            Com.SetReader("3#过流", new Omron_Reader(commandData[74]));
+
+            commandData[75] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "472.02"
+            };//W472.02 输出电流过大
+            Com.SetReader("3#输出电流过大", new Omron_Reader(commandData[75]));
+
+            commandData[76] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "472.04"
+            };//W472.04 过压
+            Com.SetReader("3#过压", new Omron_Reader(commandData[76]));
+
+            commandData[77] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "472.06"
+            };//W472.06 温度过高 
+            Com.SetReader("3#温度过高", new Omron_Reader(commandData[77]));
+
+            commandData[78] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "53.00"
+            };//53.00充电操作
+            Com.SetCommand("3#充电操作", new Omron_ClickDown(commandData[78]));
+
+            commandData[79] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "53.01"
+            };//53.01 放电操作
+            Com.SetCommand("3#放电操作", new Omron_ClickDown(commandData[79]));
+
+            commandData[80] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "53.02"
+            };//53.02 停止操作
+            Com.SetCommand("3#停止操作", new Omron_ClickDown(commandData[80]));
+            #endregion
+
+            #region 确认操作
+            commandData[81] = new OmronCommandData()
+            {
+                AC = AreaCode.WR_Bit,
+                DType = DataType.Bit,
+                StrAddress = "105.03"
+            };//105.03 确认操作 
+            Com.SetCommand("确认操作", new Omron_ClickDown(commandData[81]));
+            #endregion
+
+            Com.Start();
+        }
+
+
+        
+        /// <summary>
+        /// 读取和设置 1通道充电电流设置值
+        /// </summary>
+        public string P1_充电电流设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("1#充电电流设置").StrData = value;
+                Com.ExcuteCommand("1#充电电流设置");
+            }
+        }
+
+
+        /// <summary>
+        /// 读取和设置 1通道充电时间设置值
+        /// </summary>
+        public string P1_充电时间设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("1#充电时间设置").StrData = value;
+                Com.ExcuteCommand("1#充电时间设置");
+            }
+        }
+
+
+        /// <summary>
+        /// 读取和设置 1通道放电电流设置值
+        /// </summary>
+        public string P1_放电电流设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("1#放电电流设置").StrData = value;
+                Com.ExcuteCommand("1#放电电流设置");
+            }
+        }
+
+
+        /// <summary>
+        /// 读取和设置 1通道放电时间设置值
+        /// </summary>
+        public string P1_放电时间设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("1#放电时间设置").StrData = value;
+                Com.ExcuteCommand("1#放电时间设置");
+            }
+        }
+
+
+
+        /// <summary>
+        /// 读取和设置 1通道起始电压设置值
+        /// </summary>
+        public string P1_起始电压设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("1#起始电压设置").StrData = value;
+                Com.ExcuteCommand("1#起始电压设置");
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// 读取和设置 1通道充电终止电压设置值
+        /// </summary>
+        public string P1_充电终止电压设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("1#充电终止电压设置").StrData = value;
+                Com.ExcuteCommand("1#充电终止电压设置");
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// 读取和设置 1通道放电终止电压设置值
+        /// </summary>
+        public string P1_放电终止电压设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("1#放电终止电压设置").StrData = value;
+                Com.ExcuteCommand("1#放电终止电压设置");
+            }
+        }
+
+
+
+        /// <summary>
+        /// 读取和设置 1通道循环次数设置值
+        /// </summary>
+        public string P1_循环次数设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("1#循环次数设置").StrData = value;
+                Com.ExcuteCommand("1#循环次数设置");
+            }
+        }
+
+        /// <summary>
+        /// 读取1通道充电电流
+        /// </summary>
+        public string P1_显示充电电流
+        {
+            get { return Com.GetReader("1#显示充电电流").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取1通道放电电流
+        /// </summary>
+        public string P1_显示放电电流
+        {
+            get { return Com.GetReader("1#显示放电电流").ToString(); }
+        }
+
+
+
+        /// <summary>
+        /// 读取1通道电池电压
+        /// </summary>
+        public string P1_显示电池电压
+        {
+            get { return Com.GetReader("1#显示电池电压").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取1通道充电时间
+        /// </summary>
+        public string P1_显示充电时间
+        {
+            get { return Com.GetReader("1#显示充电时间").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取1通道循环次数
+        /// </summary>
+        public string P1_显示循环次数
+        {
+            get { return Com.GetReader("1#显示循环次数").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取1通道放电时间
+        /// </summary>
+        public string P1_显示放电时间
+        {
+            get { return Com.GetReader("1#显示放电时间").ToString(); }
+        }
+
+
+        /// <summary>
+        /// 读取1通道放电安时数
+        /// </summary>
+        public string P1_显示放电安时数
+        {
+            get { return Com.GetReader("1#显示放电安时数").ToString(); }
+        }
+
+
+        /// <summary>
+        /// 读取1通道运行状态
+        /// </summary>
+        public string P1_显示运行状态
+        {
+            get { return Com.GetReader("1#显示运行状态").ToString(); }
+        }
+
+
+
+        /// <summary>
+        /// 读取1通道是否小于充电起始电压
+        /// </summary>
+        public bool P1_是否小于充电起始电压
+        {
+            get { return bool.Parse(Com.GetReader("1#小于充电起始电压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取1通道是否大于充电终止电压
+        /// </summary>
+        public bool P1_是否大于充电终止电压
+        {
+            get { return bool.Parse(Com.GetReader("1#大于充电终止电压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取1通道是否小于放电终止电压
+        /// </summary>
+        public bool P1_是否小于放电终止电压
+        {
+            get { return bool.Parse(Com.GetReader("1#小于放电终止电压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取1通道是否电池极性接反 
+        /// </summary>
+        public bool P1_是否电池极性接反
+        {
+            get { return bool.Parse(Com.GetReader("1#电池极性接反").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取1通道是否输出电流过大
+        /// </summary>
+        public bool P1_是否输出电流过大
+        {
+            get { return bool.Parse(Com.GetReader("1#输出电流过大").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取1通道是否过压
+        /// </summary>
+        public bool P1_是否过压
+        {
+            get { return bool.Parse(Com.GetReader("1#过压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取1通道是否过流
+        /// </summary>
+        public bool P1_是否过流
+        {
+            get { return bool.Parse(Com.GetReader("1#过流").ToString()); }
+        }
+        /// <summary>
+        /// 读取1通道是否温度过高
+        /// </summary>
+        public bool P1_是否温度过高
+        {
+            get { return bool.Parse(Com.GetReader("1#温度过高").ToString()); }
+        }
+        /// <summary>
+        /// 1通道充电操作
+        /// </summary>
+        public void Set1充电操作()
+        {
+            Com.ExcuteCommand("1#充电操作");
+        }
+
+        /// <summary>
+        /// 1通道放电操作
+        /// </summary>
+        public void Set1放电操作()
+        {
+            Com.ExcuteCommand("1#放电操作");
+        }
+
+        /// <summary>
+        /// 1通道停止操作
+        /// </summary>
+        public void Set1停止操作()
+        {
+            Com.ExcuteCommand("1#停止操作");
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /// <summary>
+        /// 读取和设置 2通道充电电流设置值
+        /// </summary>
+        public string P2_充电电流设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("2#充电电流设置").StrData = value;
+                Com.ExcuteCommand("2#充电电流设置");
+            }
+        }
+
+
+        /// <summary>
+        /// 读取和设置 2通道充电时间设置值
+        /// </summary>
+        public string P2_充电时间设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("2#充电时间设置").StrData = value;
+                Com.ExcuteCommand("2#充电时间设置");
+            }
+        }
+
+
+        /// <summary>
+        /// 读取和设置 2通道放电电流设置值
+        /// </summary>
+        public string P2_放电电流设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("2#放电电流设置").StrData = value;
+                Com.ExcuteCommand("2#放电电流设置");
+            }
+        }
+
+
+        /// <summary>
+        /// 读取和设置 2通道放电时间设置值
+        /// </summary>
+        public string P2_放电时间设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("2#放电时间设置").StrData = value;
+                Com.ExcuteCommand("2#放电时间设置");
+            }
+        }
+
+
+
+        /// <summary>
+        /// 读取和设置 2通道起始电压设置值
+        /// </summary>
+        public string P2_起始电压设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("2#起始电压设置").StrData = value;
+                Com.ExcuteCommand("2#起始电压设置");
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// 读取和设置 2通道充电终止电压设置值
+        /// </summary>
+        public string P2_充电终止电压设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("2#充电终止电压设置").StrData = value;
+                Com.ExcuteCommand("2#充电终止电压设置");
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// 读取和设置 2通道放电终止电压设置值
+        /// </summary>
+        public string P2_放电终止电压设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("2#放电终止电压设置").StrData = value;
+                Com.ExcuteCommand("2#放电终止电压设置");
+            }
+        }
+
+
+
+        /// <summary>
+        /// 读取和设置 2通道循环次数设置值
+        /// </summary>
+        public string P2_循环次数设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("2#循环次数设置").StrData = value;
+                Com.ExcuteCommand("2#循环次数设置");
+            }
+        }
+
+        /// <summary>
+        /// 读取2通道充电电流
+        /// </summary>
+        public string P2_显示充电电流
+        {
+            get { return Com.GetReader("2#显示充电电流").ToString(); }
+        }
+
+
+        /// <summary>
+        /// 读取2通道放电电流
+        /// </summary>
+        public string P2_显示放电电流
+        {
+            get { return Com.GetReader("2#显示放电电流").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取2通道电池电压
+        /// </summary>
+        public string P2_显示电池电压
+        {
+            get { return Com.GetReader("2#显示电池电压").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取2通道充电时间
+        /// </summary>
+        public string P2_显示充电时间
+        {
+            get { return Com.GetReader("2#显示充电时间").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取2通道循环次数
+        /// </summary>
+        public string P2_显示循环次数
+        {
+            get { return Com.GetReader("2#显示循环次数").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取2通道放电时间
+        /// </summary>
+        public string P2_显示放电时间
+        {
+            get { return Com.GetReader("2#显示放电时间").ToString(); }
+        }
+
+
+        /// <summary>
+        /// 读取2通道放电安时数
+        /// </summary>
+        public string P2_显示放电安时数
+        {
+            get { return Com.GetReader("2#显示放电安时数").ToString(); }
+        }
+
+
+        /// <summary>
+        /// 读取2通道运行状态
+        /// </summary>
+        public string P2_显示运行状态
+        {
+            get { return Com.GetReader("2#显示运行状态").ToString(); }
+        }
+
+
+
+        /// <summary>
+        /// 读取2通道是否小于充电起始电压
+        /// </summary>
+        public bool P2_是否小于充电起始电压
+        {
+            get { return bool.Parse(Com.GetReader("2#小于充电起始电压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取2通道是否大于充电终止电压
+        /// </summary>
+        public bool P2_是否大于充电终止电压
+        {
+            get { return bool.Parse(Com.GetReader("2#大于充电终止电压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取2通道是否小于放电终止电压
+        /// </summary>
+        public bool P2_是否小于放电终止电压
+        {
+            get { return bool.Parse(Com.GetReader("2#小于放电终止电压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取2通道是否电池极性接反 
+        /// </summary>
+        public bool P2_是否电池极性接反
+        {
+            get { return bool.Parse(Com.GetReader("2#电池极性接反").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取2通道是否输出电流过大
+        /// </summary>
+        public bool P2_是否输出电流过大
+        {
+            get { return bool.Parse(Com.GetReader("2#输出电流过大").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取2通道是否过压
+        /// </summary>
+        public bool P2_是否过压
+        {
+            get { return bool.Parse(Com.GetReader("2#过压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取2通道是否过流
+        /// </summary>
+        public bool P2_是否过流
+        {
+            get { return bool.Parse(Com.GetReader("2#过流").ToString()); }
+        }
+        /// <summary>
+        /// 读取2通道是否温度过高
+        /// </summary>
+        public bool P2_是否温度过高
+        {
+            get { return bool.Parse(Com.GetReader("2#温度过高").ToString()); }
+        }
+        /// <summary>
+        /// 2通道充电操作
+        /// </summary>
+        public void Set2充电操作()
+        {
+            Com.ExcuteCommand("2#充电操作");
+        }
+
+        /// <summary>
+        /// 2通道放电操作
+        /// </summary>
+        public void Set2放电操作()
+        {
+            Com.ExcuteCommand("2#放电操作");
+        }
+
+        /// <summary>
+        /// 2通道停止操作
+        /// </summary>
+        public void Set2停止操作()
+        {
+            Com.ExcuteCommand("2#停止操作");
+        }
+
+
+        /// <summary>
+        /// 读取和设置 3通道充电电流设置值
+        /// </summary>
+        public string P3_充电电流设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("3#充电电流设置").StrData = value;
+                Com.ExcuteCommand("3#充电电流设置");
+            }
+        }
+
+
+        /// <summary>
+        /// 读取和设置 3通道充电时间设置值
+        /// </summary>
+        public string P3_充电时间设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("3#充电时间设置").StrData = value;
+                Com.ExcuteCommand("3#充电时间设置");
+            }
+        }
+
+
+        /// <summary>
+        /// 读取和设置 3通道放电电流设置值
+        /// </summary>
+        public string P3_放电电流设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("3#放电电流设置").StrData = value;
+                Com.ExcuteCommand("3#放电电流设置");
+            }
+        }
+
+
+        /// <summary>
+        /// 读取和设置 3通道放电时间设置值
+        /// </summary>
+        public string P3_放电时间设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("3#放电时间设置").StrData = value;
+                Com.ExcuteCommand("3#放电时间设置");
+            }
+        }
+
+
+
+        /// <summary>
+        /// 读取和设置 3通道起始电压设置值
+        /// </summary>
+        public string P3_起始电压设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("3#起始电压设置").StrData = value;
+                Com.ExcuteCommand("3#起始电压设置");
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// 读取和设置 3通道充电终止电压设置值
+        /// </summary>
+        public string P3_充电终止电压设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("3#充电终止电压设置").StrData = value;
+                Com.ExcuteCommand("3#充电终止电压设置");
+            }
+        }
+
+
+
+
+        /// <summary>
+        /// 读取和设置 3通道放电终止电压设置值
+        /// </summary>
+        public string P3_放电终止电压设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("3#放电终止电压设置").StrData = value;
+                Com.ExcuteCommand("3#放电终止电压设置");
+            }
+        }
+
+
+
+        /// <summary>
+        /// 读取和设置 3通道循环次数设置值
+        /// </summary>
+        public string P3_循环次数设置值
+        {
+            get { return "尚未写入方法"; }
+            set
+            {
+                Com.GetWriteDataCommand("3#循环次数设置").StrData = value;
+                Com.ExcuteCommand("3#循环次数设置");
+            }
+        }
+
+        /// <summary>
+        /// 读取3通道充电电流
+        /// </summary>
+        public string P3_显示充电电流
+        {
+            get { return Com.GetReader("3#显示充电电流").ToString(); }
+        }
+
+
+
+        /// <summary>
+        /// 读取3通道放电电流
+        /// </summary>
+        public string P3_显示放电电流
+        {
+            get { return Com.GetReader("3#显示放电电流").ToString(); }
+        }
+
+
+        /// <summary>
+        /// 读取3通道电池电压
+        /// </summary>
+        public string P3_显示电池电压
+        {
+            get { return Com.GetReader("3#显示电池电压").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取3通道充电时间
+        /// </summary>
+        public string P3_显示充电时间
+        {
+            get { return Com.GetReader("3#显示充电时间").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取3通道循环次数
+        /// </summary>
+        public string P3_显示循环次数
+        {
+            get { return Com.GetReader("3#显示循环次数").ToString(); }
+        }
+
+        /// <summary>
+        /// 读取3通道放电时间
+        /// </summary>
+        public string P3_显示放电时间
+        {
+            get { return Com.GetReader("3#显示放电时间").ToString(); }
+        }
+
+
+        /// <summary>
+        /// 读取3通道放电安时数
+        /// </summary>
+        public string P3_显示放电安时数
+        {
+            get { return Com.GetReader("3#显示放电安时数").ToString(); }
+        }
+
+
+        /// <summary>
+        /// 读取3通道运行状态
+        /// </summary>
+        public string P3_显示运行状态
+        {
+            get { return Com.GetReader("3#显示运行状态").ToString(); }
+        }
+
+
+
+        /// <summary>
+        /// 读取3通道是否小于充电起始电压
+        /// </summary>
+        public bool P3_是否小于充电起始电压
+        {
+            get { return bool.Parse(Com.GetReader("3#小于充电起始电压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取3通道是否大于充电终止电压
+        /// </summary>
+        public bool P3_是否大于充电终止电压
+        {
+            get { return bool.Parse(Com.GetReader("3#大于充电终止电压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取3通道是否小于放电终止电压
+        /// </summary>
+        public bool P3_是否小于放电终止电压
+        {
+            get { return bool.Parse(Com.GetReader("3#小于放电终止电压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取3通道是否电池极性接反 
+        /// </summary>
+        public bool P3_是否电池极性接反
+        {
+            get { return bool.Parse(Com.GetReader("3#电池极性接反").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取3通道是否输出电流过大
+        /// </summary>
+        public bool P3_是否输出电流过大
+        {
+            get { return bool.Parse(Com.GetReader("3#输出电流过大").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取3通道是否过压
+        /// </summary>
+        public bool P3_是否过压
+        {
+            get { return bool.Parse(Com.GetReader("3#过压").ToString()); }
+        }
+
+        /// <summary>
+        /// 读取3通道是否过流
+        /// </summary>
+        public bool P3_是否过流
+        {
+            get { return bool.Parse(Com.GetReader("3#过流").ToString()); }
+        }
+        /// <summary>
+        /// 读取3通道是否温度过高
+        /// </summary>
+        public bool P3_是否温度过高
+        {
+            get { return bool.Parse(Com.GetReader("3#温度过高").ToString()); }
+        }
+        /// <summary>
+        /// 3通道充电操作
+        /// </summary>
+        public void Set3充电操作()
+        {
+            Com.ExcuteCommand("3#充电操作");
+        }
+
+        /// <summary>
+        /// 3通道放电操作
+        /// </summary>
+        public void Set3放电操作()
+        {
+            Com.ExcuteCommand("3#放电操作");
+        }
+
+        /// <summary>
+        /// 3通道停止操作
+        /// </summary>
+        public void Set3停止操作()
+        {
+            Com.ExcuteCommand("3#停止操作");
+        }
+
+        public void M_确认操作()
+        {
+            Com.ExcuteCommand("确认操作");
+        }
+
+    }
+
+
+}

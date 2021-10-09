@@ -1,0 +1,398 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Drawing;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Windows.Forms;
+using TestSystem.BusinessRule.Interface.SchemeModule;
+using TestSystem.BusinessRule.SchemeModule;
+
+
+
+namespace SHDC_XDCTestForm
+{
+    public partial class UC_SystemSet : UserControl
+    {
+ 
+        ISchemeRowBO schemeRowBO = new TestSystem.BusinessRule.SchemeModule.SchemeRowBO();
+
+        int int_status = 0;//0默认状态，1新增状态，2修改状态
+        public UC_SystemSet()
+        {
+            InitializeComponent();
+            Load();
+        }
+
+        private void btn_exit_Click(object sender, EventArgs e)
+        {
+            this.FindForm().Close();
+        }
+
+        void Load()
+        {
+
+            //DataSet ds = schemeRowBO.SelectData("Config");
+            //if (cmb_xdcxh.DataSource != null)
+            //    cmb_xdcxh.DataSource = null;
+            //cmb_xdcxh.DataSource = ds.Tables[0].DefaultView;
+            //cmb_xdcxh.ValueMember = "Col_Code";
+            //cmb_xdcxh.DisplayMember = "Col_Name";
+
+            
+
+            #region 查表中所有信息，显示某一列数据
+            DataTable ds = schemeRowBO.SelectData("Config");
+            cmb_xdcxh.DataSource = ds;
+            cmb_xdcxh.DisplayMember = "蓄电池型号";
+            cmb_xdcxh.ValueMember = "蓄电池型号";
+            #endregion
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Load();
+        }
+
+
+        /// <summary>
+        /// 将状态更改为新增状态
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_add_Click(object sender, EventArgs e)
+        {
+            int_status = 1;
+            btn_mod.Enabled = false;
+            btn_save.Enabled = true;
+            btn_add.Enabled = true;
+        }
+
+
+        /// <summary>
+        /// 添加配置信息
+        /// </summary>
+        public void Add()
+        {
+            if (string.IsNullOrEmpty(txt_cdsj1.Text))
+            {
+                MessageBox.Show("充电时间设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_cddl1.Text))
+            {
+                MessageBox.Show("充电电流设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_fdsj1.Text))
+            {
+                MessageBox.Show("放电时间设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_fddl1.Text))
+            {
+                MessageBox.Show("充电电流设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_xhcs1.Text))
+            {
+                MessageBox.Show("循环次数设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_qsdy1.Text))
+            {
+                MessageBox.Show("起始电压设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_cdzzdy1.Text))
+            {
+                MessageBox.Show("充电终止电压设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_fdzzdy1.Text))
+            {
+                MessageBox.Show("放电终止电压设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cmb_xdcxh.Text))
+            {
+                MessageBox.Show("蓄电池型号不能为空!");
+                return;
+            }
+
+            string[] argColName = new string[9];
+            string[] argColContent = new string[9];
+            argColName[0] = "蓄电池型号";
+            argColContent[0] = cmb_xdcxh.Text;
+
+            argColName[1] = "充电时间设置";
+            argColContent[1] = txt_cdsj1.Text;
+
+
+            argColName[2] = "充电电流设置";
+            argColContent[2] = txt_cddl1.Text;
+
+
+            argColName[3] = "放电时间设置";
+            argColContent[3] = txt_fdsj1.Text;
+
+            argColName[4] = "放电电流设置";
+            argColContent[4] = txt_fddl1.Text;
+
+
+            argColName[5] = "循环次数设置";
+            argColContent[5] = txt_xhcs1.Text;
+
+            argColName[6] = "起始电压设置";
+            argColContent[6] = txt_qsdy1.Text;
+
+            argColName[7] = "充电终止电压设置";
+            argColContent[7] = txt_cdzzdy1.Text;
+
+            argColName[8] = "放电终止电压设置";
+            argColContent[8] = txt_fdzzdy1.Text;
+
+
+
+            ISchemeRowBO _SchemeRowBO = new SchemeRowBO();
+            _SchemeRowBO.SaveData("Config", argColName, argColContent, false);
+        }
+
+
+        /// <summary>
+        /// 让textbox只能输入数字和浮点数字
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void txt_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+
+            if ((e.KeyChar >= '0' && e.KeyChar <= '9') || e.KeyChar == '.' || e.KeyChar == '\b')
+            {
+                if (e.KeyChar == '.')
+                {
+                    foreach (Control c in this.Controls[0].Controls)
+                    {
+                        if (c.Focused)
+                        {
+                            if (e.KeyChar == '.')
+                            {
+                                if (c.Text.IndexOf('.') < 0)
+                                {
+                                    e.Handled = false;
+                                }
+                                else
+                                {
+                                    e.Handled = true;
+                                }
+                            }
+                        }
+
+                    }
+                }
+                else
+                {
+                    e.Handled = false;
+                }
+               
+            }
+        }
+
+  
+
+        /// <summary>
+        /// 将状态更改为修改状态
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btn_mod_Click(object sender, EventArgs e)
+        {
+            int_status = 2;
+            btn_save.Enabled = true;
+            btn_mod.Enabled = true;
+            btn_add.Enabled = false;
+        }
+
+        /// <summary>
+        /// 修改配置信息
+        /// </summary>
+        public void Mod()
+        {
+            if (string.IsNullOrEmpty(txt_cdsj1.Text))
+            {
+                MessageBox.Show("充电时间设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_cddl1.Text))
+            {
+                MessageBox.Show("充电电流设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_fdsj1.Text))
+            {
+                MessageBox.Show("放电时间设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_fddl1.Text))
+            {
+                MessageBox.Show("充电电流设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_xhcs1.Text))
+            {
+                MessageBox.Show("循环次数设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_qsdy1.Text))
+            {
+                MessageBox.Show("起始电压设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_cdzzdy1.Text))
+            {
+                MessageBox.Show("充电终止电压设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(txt_fdzzdy1.Text))
+            {
+                MessageBox.Show("放电终止电压设置不能为空!");
+                return;
+            }
+
+            if (string.IsNullOrEmpty(cmb_xdcxh.Text))
+            {
+                MessageBox.Show("蓄电池型号不能为空!");
+                return;
+            }
+
+
+
+        
+
+            string[] argColName = new string[9];
+            string[] argColContent = new string[9];
+            argColName[0] = "蓄电池型号";
+            argColContent[0] = cmb_xdcxh.Text;
+
+            argColName[1] = "充电时间设置";
+            argColContent[1] = txt_cdsj1.Text;
+
+
+            argColName[2] = "充电电流设置";
+            argColContent[2] = txt_cddl1.Text;
+
+
+            argColName[3] = "放电时间设置";
+            argColContent[3] = txt_fdsj1.Text;
+
+            argColName[4] = "放电电流设置";
+            argColContent[4] = txt_fddl1.Text;
+
+
+            argColName[5] = "循环次数设置";
+            argColContent[5] = txt_xhcs1.Text;
+
+            argColName[6] = "起始电压设置";
+            argColContent[6] = txt_qsdy1.Text;
+
+            argColName[7] = "充电终止电压设置";
+            argColContent[7] = txt_cdzzdy1.Text;
+
+            argColName[8] = "放电终止电压设置";
+            argColContent[8] = txt_fdzzdy1.Text;
+
+
+
+            ISchemeRowBO _SchemeRowBO = new SchemeRowBO();
+            _SchemeRowBO.ModifyData("Config", "蓄电池型号", argColName, argColContent);
+        }
+
+        private void btn_save_Click(object sender, EventArgs e)
+        {
+            switch (int_status)
+            {
+                case 1:
+                    try
+                    {
+                        Add();
+                        btn_add.Enabled = true;
+                        btn_mod.Enabled = true;
+                        int_status = 0;
+                        MessageBox.Show("数据新增成功!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("数据新增失败!");
+                    }
+                    
+                    break;
+                case 2:
+                    try
+                    {
+                        Mod();
+                        btn_add.Enabled = true;
+                        btn_mod.Enabled = true;
+                        int_status = 0;
+                        MessageBox.Show("数据修改成功!");
+                    }
+                    catch
+                    {
+                        MessageBox.Show("数据修改失败!");
+                    }
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        private void cmb_xdcxh_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+            #region 根据某一列的列名和条件值查询
+            string temp_cmbtext = "";
+            if (this.cmb_xdcxh.SelectedValue.ToString() == "System.Data.DataRowView")
+            {
+                temp_cmbtext=((System.Data.DataRowView)(cmb_xdcxh.SelectedValue)).DataView.Table.Rows[0][cmb_xdcxh.SelectedIndex].ToString();
+            }
+            else
+            {
+                temp_cmbtext = this.cmb_xdcxh.SelectedValue.ToString();
+            }
+            DataTable ds2 = schemeRowBO.SelectData("Config", "蓄电池型号", temp_cmbtext, "", "");
+            try
+            {
+                this.txt_cddl1.Text = ds2.Rows[0]["充电电流设置"].ToString();
+                this.txt_cdsj1.Text = ds2.Rows[0]["充电时间设置"].ToString();
+                this.txt_fdsj1.Text = ds2.Rows[0]["放电时间设置"].ToString();
+                this.txt_fddl1.Text = ds2.Rows[0]["放电电流设置"].ToString();
+                this.txt_xhcs1.Text = ds2.Rows[0]["循环次数设置"].ToString();
+                this.txt_qsdy1.Text = ds2.Rows[0]["起始电压设置"].ToString();
+                this.txt_cdzzdy1.Text = ds2.Rows[0]["充电终止电压设置"].ToString();
+                this.txt_fdzzdy1.Text = ds2.Rows[0]["放电终止电压设置"].ToString();
+            }
+            catch
+            {
+            }
+            #endregion
+        }
+      
+    }
+}
